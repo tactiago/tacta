@@ -1,5 +1,6 @@
 import Countdown from '@/components/countdown'
 import { cn } from '@/lib/utils'
+import { CalendarHeart, Map } from 'lucide-react'
 import Image from 'next/image'
 
 export const responsiveWidth = "w-screen md:w-[80vw] lg:w-[70vw]"
@@ -17,12 +18,26 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='flex justify-center my-8'>
+      <div className='flex justify-center py-8'>
         <div className={cn("flex justify-center flex-col items-center", responsiveWidth)}>
+          <CalendarHeart className='h-10 w-10 mb-2' strokeWidth={1.5} />
           <h1 className='text-primary text-xl mb-2'>Faltam</h1>
           <Countdown />
         </div>
+      </div>
 
+      <div className='flex justify-center py-8 border-t border-dashed border-secondary'>
+        <div className='overflow-hidden relative w-screen flex justify-center flex-col items-center'>
+          <Map className='h-10 w-10 mb-2' strokeWidth={1.5} />
+          <h1 className='text-primary text-xl mb-2'>Local da Cerimônia & Festa</h1>
+          <p className='text-center text-sm my-2'>Recanto Santa Bárbara, Rod. dos Tamoios, Km 22,5, Jambeiro - SP, 12270-000</p>
+          <iframe
+            className={cn('h-[50vh]', responsiveWidth)}
+            src="https://maps.google.com/maps?hl=pt&amp;q=Recanto%20Santa%20Barbara+(Title)&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed"
+            scrolling="no"
+          ></iframe>
+        </div>
+        <br />
       </div>
     </div >
   )
