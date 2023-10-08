@@ -27,7 +27,7 @@ export default function AddToCalendarButton() {
 
     return (
       <Button className="text-white rounded-full">
-        <a href={`data:text/calendar;charset=utf8,${calendarUrl}`} download="evento_tacta.ics" className="w-full h-full">
+        <a href={`data:text/calendar;charset=utf8,${calendarUrl}`} download="evento_tacta.ics" className="w-full h-full flex text-center items-center">
           Adicionar no meu calendário
         </a>
       </Button>

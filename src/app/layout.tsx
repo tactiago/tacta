@@ -1,10 +1,8 @@
 import Header from '@/components/header'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import Footer from '@/components/footer'
-
-const inter = Inter({ subsets: ['latin'] })
+import { fontCinzel, fontInter } from '@/theme/fonts'
 
 export const metadata: Metadata = {
   title: '#TacTa2024',
@@ -18,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className='scroll-smooth'>
-      <body className={inter.className + ' flex flex-col min-h-screen justify-center items-center overflow-x-hidden'}>
+      <body className={fontCinzel.className + ' flex flex-col min-h-screen justify-center items-center overflow-x-hidden'}>
         <Header />
         <main className='flex-1 w-full flex justify-center'>{children}</main>
         <Footer />

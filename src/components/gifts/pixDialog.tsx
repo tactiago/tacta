@@ -43,7 +43,7 @@ export default function PixDialog({ total }: pixDialogProps) {
   return (
     <Dialog>
       <DialogTrigger>
-        <Button variant="outline">Presentear <Gift className='h-5 w-5 ml-2' strokeWidth={1.5} /></Button>
+        <Button variant="outline" className="font-bold md:text-lg sm:text-lg text-sm">Presentear <Gift className='h-5 w-5 ml-2' strokeWidth={1.5} /></Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>

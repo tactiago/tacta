@@ -61,6 +61,9 @@ devDependencies:
   '@types/react':
     specifier: latest
     version: 18.2.25
+  '@types/react-copy-to-clipboard':
+    specifier: ^5.0.5
+    version: 5.0.5
   '@types/react-dom':
     specifier: latest
     version: 18.2.11
@@ -919,6 +922,12 @@ packages:
 
   /@types/prop-types@15.7.8:
     resolution: {integrity: sha512-kMpQpfZKSCBqltAJwskgePRaYRFukDkm1oItcAbC3gNELR20XIBcN9VRgg4+m8DKsTfkWeA4m4Imp4DDuWy7FQ==}
+
+  /@types/react-copy-to-clipboard@5.0.5:
+    resolution: {integrity: sha512-en3JGqPA4RX4aUlo6q6uUbnqLp31Dhm2E/thiMvFTIvU+dUDG249jBG2MJ0rPMXE/MbKVrpmi/1r1G4QLhIHKQ==}
+    dependencies:
+      '@types/react': 18.2.25
+    dev: true
 
   /@types/react-dom@18.2.11:
     resolution: {integrity: sha512-zq6Dy0EiCuF9pWFW6I6k6W2LdpUixLE4P6XjXU1QHLfak3GPACQfLwEuHzY5pOYa4hzj1d0GxX/P141aFjZsyg==}
