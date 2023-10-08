@@ -7,7 +7,7 @@ import {
   MenubarShortcut,
   MenubarTrigger,
 } from "@/components/ui/menubar"
-import { MenuIcon } from "lucide-react"
+import { CalendarHeart, Gift, Home, Map, MenuIcon, Users } from "lucide-react"
 
 export default function Menu() {
   return (
@@ -15,23 +15,27 @@ export default function Menu() {
       <MenubarMenu>
         <MenubarTrigger><MenuIcon /></MenubarTrigger>
         <MenubarContent>
-          <MenubarItem>
-            Calendário <MenubarShortcut>⌘T</MenubarShortcut>
-          </MenubarItem>
-          <MenubarItem>
-            Local <MenubarShortcut>⌘T</MenubarShortcut>
-          </MenubarItem>
-          <MenubarItem>
-            Presentes <MenubarShortcut>⌘T</MenubarShortcut>
-          </MenubarItem>
-          <MenubarItem>
-            Padrinhos <MenubarShortcut>⌘T</MenubarShortcut>
-          </MenubarItem>
-          <MenubarItem>New Window</MenubarItem>
+          <a href="/">
+            <MenubarItem>
+              Inicial <MenubarShortcut><Home className='h-5 w-5' strokeWidth={1.5} /></MenubarShortcut>
+            </MenubarItem>
+          </a>
           <MenubarSeparator />
-          <MenubarItem>Share</MenubarItem>
+          <MenubarItem>
+            Calendário <MenubarShortcut><CalendarHeart className='h-5 w-5' strokeWidth={1.5} /></MenubarShortcut>
+          </MenubarItem>
+          <MenubarItem>
+            Local <MenubarShortcut><Map className='h-5 w-5' strokeWidth={1.5} /></MenubarShortcut>
+          </MenubarItem>
           <MenubarSeparator />
-          <MenubarItem>Print</MenubarItem>
+          <a href="./Gifts">
+            <MenubarItem>
+              Presentes <MenubarShortcut><Gift className='h-5 w-5' strokeWidth={1.5} /></MenubarShortcut>
+            </MenubarItem>
+          </a>
+          <MenubarItem>
+            Padrinhos <MenubarShortcut><Users className='h-5 w-5' strokeWidth={1.5} /></MenubarShortcut>
+          </MenubarItem>
         </MenubarContent>
       </MenubarMenu>
     </Menubar>

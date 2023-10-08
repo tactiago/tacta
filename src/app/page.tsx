@@ -1,3 +1,4 @@
+import AddToCalendarButton from '@/components/addToCalendar'
 import Countdown from '@/components/countdown'
 import { cn } from '@/lib/utils'
 import { CalendarHeart, Map } from 'lucide-react'
@@ -19,10 +20,11 @@ export default function Home() {
       </div>
 
       <div className='flex justify-center py-8'>
-        <div className={cn("flex justify-center flex-col items-center", responsiveWidth)}>
-          <CalendarHeart className='h-10 w-10 mb-2' strokeWidth={1.5} />
-          <h1 className='text-primary text-xl mb-2'>Faltam</h1>
+        <div className={cn("flex justify-center flex-col items-center gap-2", responsiveWidth)}>
+          <CalendarHeart className='h-10 w-10' strokeWidth={1.5} />
+          <h1 className='text-primary text-xl'>Faltam</h1>
           <Countdown />
+          <AddToCalendarButton />
         </div>
       </div>
 
