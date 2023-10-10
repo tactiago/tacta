@@ -2,7 +2,7 @@ import Header from '@/components/header'
 import './globals.css'
 import type { Metadata } from 'next'
 import Footer from '@/components/footer'
-import { fontCinzel, fontInter } from '@/theme/fonts'
+import { fontCinzel } from '@/theme/fonts'
 
 export const metadata: Metadata = {
   title: '#TacTa2024',
