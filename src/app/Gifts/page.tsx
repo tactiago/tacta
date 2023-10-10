@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { useState } from "react";
 import PixDialog from "@/components/gifts/pixDialog";
 import { Button } from "@/components/ui/button";
+import H1, { h1IconClasses } from "@/components/content/h1";
 
 export default function Gifts() {
   const [total, setTotal] = useState(0)
@@ -18,9 +19,12 @@ export default function Gifts() {
   return (
     <div className="flex flex-col items-center">
       <div className="flex flex-col items-center my-4">
-        <Gift className='h-10 w-10 mb-2' strokeWidth={1.5} />
-        <h1 className='text-primary text-xl'>Presentes</h1>
-        <p className="text-muted-foreground text-center px-2">Escolha tudo o gostaria de presentear os noivos</p>
+        <H1
+          icon={<Gift className={h1IconClasses} strokeWidth={1.5} />}
+          subtitle="Escolha tudo o gostaria de presentear os noivo"
+        >
+          Presentes
+        </H1>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-4">

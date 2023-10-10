@@ -1,7 +1,7 @@
 import AddToCalendarButton from '@/components/addToCalendar'
+import H1, { h1IconClasses } from '@/components/content/h1'
 import Countdown from '@/components/countdown'
 import { cn } from '@/lib/utils'
-import { fontRouge } from '@/theme/fonts'
 import { CalendarHeart, Map } from 'lucide-react'
 import Image from 'next/image'
 
@@ -22,8 +22,9 @@ export default function Home() {
 
       <div className='flex justify-center py-8 bg-secondary'>
         <div className={cn("flex justify-center flex-col items-center gap-2 px-2", responsiveWidth)}>
-          <CalendarHeart className='h-10 w-10 text-primary' strokeWidth={1.5} />
-          <h1 className='text-xl font-semibold'>Faltam</h1>
+          <H1
+            icon={<CalendarHeart className={h1IconClasses} strokeWidth={1.5} />}
+          >Faltam</H1>
           <Countdown />
           <AddToCalendarButton />
         </div>
@@ -31,9 +32,10 @@ export default function Home() {
 
       <div className='flex justify-center py-8 border-t border-dashed border-secondary'>
         <div className='overflow-hidden relative w-screen flex justify-center flex-col items-center'>
-          <Map className='h-10 w-10 mb-2 text-primary' strokeWidth={1.5} />
-          <h1 className='text-xl mb-2 font-semibold'>Local da Cerimônia & Festa</h1>
-          <p className='text-center text-sm my-2 px-2'>Recanto Santa Bárbara, Rod. dos Tamoios, Km 22,5, Jambeiro - SP, 12270-000</p>
+          <H1
+            icon={<Map className={h1IconClasses} strokeWidth={1.5} />}
+            subtitle='Recanto Santa Bárbara, Rod. dos Tamoios, Km 22,5, Jambeiro - SP, 12270-000'
+          >Local da Cerimônia & Festa</H1>
           <iframe
             className={cn('h-[50vh]', responsiveWidth)}
             src="https://maps.google.com/maps?hl=pt&amp;q=Recanto%20Santa%20Barbara+(Title)&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed"
