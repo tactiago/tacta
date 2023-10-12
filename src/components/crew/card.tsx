@@ -1,7 +1,13 @@
+"use client"
+
 import Image from "next/image";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Instagram } from "lucide-react";
-import { ShirtFolded, Dress } from "@phosphor-icons/react/dist/ssr"
+
+import blueDress from "../../../public/icons/blue-dress.svg"
+import redDress from "../../../public/icons/red-dress.svg"
+import blueShirtFolded from "../../../public/icons/blue-shirt-folded.svg"
+import redShirtFolded from "../../../public/icons/red-shirt-folded.svg"
 
 type CrewCardProps = {
   gender: "male" | "female"
@@ -27,10 +33,14 @@ export default function CrewCard({ gender, side, role, name, photoUrl, instagram
   const itemsDirection = (gender === "male" ? "start" : "end")
   const sideColor = (side === "his" ? "primary" : "destructive")
 
-  const genderIcon = (gender === "male" ? <ShirtFolded size="10rem" /> : <Dress size="9rem" />)
+  const genderIcon = (gender === "male" ?
+    <Image src={(side === "his" ? blueShirtFolded : redShirtFolded)} alt="shirtFolded" className={`w-44 h-44 absolute bottom-2 left-16 opacity-5`} />
+    :
+    <Image src={(side === "his" ? blueDress : redDress)} alt="dress" className={`w-40 h-40 absolute bottom-2 right-16 opacity-5`} />
+  )
 
   const photoImage = (
-    <Image className="object-cover h-full" src={photoUrl} width={100} height={100} alt={"Foto " + responsability} />
+    <Image className="object-cover h-full" src={photoUrl} width={150} height={150} alt={"Foto " + responsability} />
   )
 
   return (
@@ -44,9 +54,7 @@ export default function CrewCard({ gender, side, role, name, photoUrl, instagram
             <Instagram className={`w-7 h-7 text-${sideColor}`} />
           </a>
         </CardDescription>
-        <div className={`absolute bottom-0 ${alignDirection}-20 text-${sideColor}/10`}>
-          {genderIcon}
-        </div>
+        {genderIcon}
       </CardHeader>
       {gender === "male" && photoImage}
     </Card>

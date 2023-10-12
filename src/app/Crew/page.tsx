@@ -1,9 +1,5 @@
+import { Users } from "lucide-react";
 import H1, { h1IconClasses } from "@/components/content/h1";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Instagram, Users } from "lucide-react";
-import Image from "next/image";
-
-import { ShirtFolded, Dress } from "@phosphor-icons/react/dist/ssr"
 import CrewCard from "@/components/crew/card";
 
 export default function Crew() {
@@ -36,6 +32,8 @@ export default function Crew() {
           instagramUsername="erikaabarrros"
         />
 
+        <div className=" col-span-1 sm:col-span-2 border-muted border-[1px] border-dashed h-0"></div>
+
         <CrewCard
           gender="male"
           name="Wesley Furtado"
@@ -52,6 +50,8 @@ export default function Crew() {
           photoUrl="https://instagram.fcgh51-1.fna.fbcdn.net/v/t51.2885-19/313927462_5441823242611444_6714731536417014156_n.jpg?stp=dst-jpg_s320x320&_nc_ht=instagram.fcgh51-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=Pz77T7iDUvsAX8UCzeZ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AfD_XTvsa7517XqQGztQrKZPX1v43yTgP6U3AlriRd4HHA&oe=652A4FD5&_nc_sid=8b3546"
           instagramUsername="erikaabarrros"
         />
+
+        <div className=" col-span-1 sm:col-span-2 border-muted border-[1px] border-dashed h-0"></div>
 
         <CrewCard
           gender="male"
