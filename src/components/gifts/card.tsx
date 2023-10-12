@@ -34,18 +34,18 @@ export default function Card({ imageSrc, title, price, selected = false, sumToTo
   return (
     <div
       aria-selected={isSelected}
-      className="border h-fit rounded-lg hover:border-primary overflow-hidden aria-selected:border-emerald-400"
+      className="border rounded-lg hover:border-primary overflow-hidden aria-selected:border-emerald-400 w-60 max-w-60 h-auto flex flex-col"
       onClick={() => handleSelectGiftCard()}
     >
-      <div className="relative overflow-hidden h-40  w-40 max-w-40 flex flex-col">
-        <Image src={imageSrc} alt={"Imagem: " + title} fill className="w-40 aspect-square object-cover transition-all hover:scale-105" />
+      <div className="relative overflow-hidden h-60 w-60 flex flex-col">
+        <Image src={imageSrc} alt={"Imagem: " + title} fill sizes="200" className="w-60 aspect-square object-cover transition-all hover:scale-105" />
         {
           isSelected ? <CheckCircle className="w-5 h-5 z-10 text-emerald-400 mt-2 ml-2 drop-shadow-sm" strokeWidth={2} /> : <CircleDashed className="w-5 h-5 z-10 text-white mt-2 ml-2 drop-shadow-sm" strokeWidth={2} />
         }
       </div>
-      <div className="p-2 gap-2 flex flex-col items-center">
-        <p className="w-36 text-center leading-relaxed break-normal">{title}</p>
-        <span className="text-muted-foreground">{formatPriceInPtBR(price)}</span>
+      <div className="flex flex-col items-center flex-1 justify-between py-2">
+        <p className="w-full text-center leading-relaxed break-normal font-thin px-2 pb-1">{title}</p>
+        <span className="text-emerald-600 font-semibold text-lg border-t border-muted w-full border-dashed text-center pt-2">{formatPriceInPtBR(price)}</span>
       </div>
     </div>
   )

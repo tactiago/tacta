@@ -8,6 +8,7 @@ import { useState } from "react";
 import PixDialog from "@/components/gifts/pixDialog";
 import { Button } from "@/components/ui/button";
 import H1, { h1IconClasses } from "@/components/content/h1";
+import { giftsList } from "./gifts";
 
 export default function Gifts() {
   const [total, setTotal] = useState(0)
@@ -28,13 +29,18 @@ export default function Gifts() {
       </div>
 
       <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-4">
-        <Card imageSrc="/NaAsa.jpg" title="Um avião pro fim de semana" price={1000} sumToTotal={sumToTotal} />
-        <Card imageSrc="/NaAsa.jpg" title="Um avião pro fim de semana" price={1000} sumToTotal={sumToTotal} />
-        <Card imageSrc="/NaAsa.jpg" title="Um avião pro fim de semana" price={1000} sumToTotal={sumToTotal} />
-        <Card imageSrc="/NaAsa.jpg" title="Um avião pro fim de semana" price={1000} sumToTotal={sumToTotal} />
-        <Card imageSrc="/NaAsa.jpg" title="Um avião pro fim de semana" price={1000} sumToTotal={sumToTotal} />
-        <Card imageSrc="/NaAsa.jpg" title="Um avião pro fim de semana" price={1000} sumToTotal={sumToTotal} />
-        <Card imageSrc="/NaAsa.jpg" title="Um avião pro fim de semana" price={1000} sumToTotal={sumToTotal} />
+        {
+          giftsList.map((gift, index) => {
+            return (
+              <Card
+                imageSrc={gift.imageSrc}
+                title={gift.title}
+                price={gift.price}
+                sumToTotal={sumToTotal}
+                key={index} />
+            )
+          })
+        }
       </div>
 
       <div className="flex flex-col items-center my-4 mx-4 border border-primary rounded-lg md:p-2 lg:p-4 sm:p-2 p-2">
