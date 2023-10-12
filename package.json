@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@phosphor-icons/react": "^2.0.13",
     "@prisma/client": "5.4.2",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-menubar": "^1.0.4",
