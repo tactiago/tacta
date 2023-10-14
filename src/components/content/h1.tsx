@@ -11,7 +11,9 @@ export default function H1({ children, icon, subtitle }: H1Props) {
     <>
       {icon}
       <h1 className='text-xl font-semibold'>{children}</h1>
-      {subtitle && <p className='text-center text-sm my-2 px-2'>{subtitle}</p>}
+      {subtitle && <p className='text-center text-sm my-2 px-2'>
+        {subtitle.split("<br />").map(str => (<>{str}<br></br></>))}
+      </p>}
     </>
   )
 }
