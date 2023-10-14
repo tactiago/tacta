@@ -1,17 +1,19 @@
-import AddToCalendarButton from '@/components/addToCalendar'
+import AddToCalendar from '@/components/addToCalendar'
 import H1, { h1IconClasses } from '@/components/content/h1'
 import Countdown from '@/components/countdown'
 import { cn } from '@/lib/utils'
-import { CalendarHeart, Map } from 'lucide-react'
+import { CalendarHeart, Gift, Map, Users } from 'lucide-react'
 import Image from 'next/image'
+import { addHours } from 'date-fns'
+import { weddingDay, weddingLocation } from './WhenAndWhere/details'
 
-export const responsiveWidth = "w-screen md:w-[80vw] lg:w-[70vw]"
+export const responsiveWidth = "w-screen md:w-[70vw] lg:w-[60vw]"
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="grid grid-cols-1">
       <div className="relative w-screen aspect-video flex justify-center">
-        <Image src="/Segura.jpg" className='absolute object-cover' fill alt={"Cambio"}></Image>
+        <Image src="/Segura.jpg" className='absolute object-cover max-w-[100vw]' fill alt={"Cambio"}></Image>
         <div className={cn('absolute top-0 h-full flex items-end pb-12', responsiveWidth)}>
           <div className='flex flex-col justify-center pl-4'>
             <span className='font-semibold text-xs md:text-lg lg:text-2xl xl:text-3xl drop-shadow text-secondary leading-relaxed'>12 de maio de 2024</span>
@@ -20,13 +22,19 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='flex justify-center py-8 bg-secondary'>
+      <div className='flex justify-center bg-secondary py-8'>
         <div className={cn("flex justify-center flex-col items-center gap-2 px-2", responsiveWidth)}>
           <H1
             icon={<CalendarHeart className={h1IconClasses} strokeWidth={1.5} />}
           >Faltam</H1>
           <Countdown />
-          <AddToCalendarButton />
+          <AddToCalendar
+            title="Casamento Thaís e Tiago"
+            location={weddingLocation}
+            startDate={weddingDay}
+            endDate={addHours(weddingDay, 6)}
+            description="Chegue com antecedência para esse voo inesquecível. Mais informações em: tacta-one.vercel.app"
+          />
         </div>
       </div>
 
@@ -34,7 +42,7 @@ export default function Home() {
         <div className='overflow-hidden relative w-screen flex justify-center flex-col items-center'>
           <H1
             icon={<Map className={h1IconClasses} strokeWidth={1.5} />}
-            subtitle='Recanto Santa Bárbara, Rod. dos Tamoios, Km 22,5, Jambeiro - SP, 12270-000'
+            subtitle={weddingLocation}
           >Local da Cerimônia & Festa</H1>
           <iframe
             className={cn('h-[50vh]', responsiveWidth)}
@@ -42,7 +50,26 @@ export default function Home() {
             scrolling="no"
           ></iframe>
         </div>
-        <br />
+      </div>
+
+      <div className='py-8 border border-dashed w-full flex flex-col gap-2 items-center justify-center'>
+        <a href="/Gifts" className={cn('flex items-center justify-center flex-col hover:bg-secondary/10 rounded-lg border p-4 mx-4', responsiveWidth)}>
+          <H1
+            icon={<Gift className={h1IconClasses} strokeWidth={1.5} />}
+            subtitle="Escolha tudo o gostaria de presentear os noivos"
+          >
+            Presentes
+          </H1>
+        </a>
+
+        <a href="/Crew" className={cn('flex items-center justify-center flex-col hover:bg-secondary/10 rounded-lg border p-4 mx-4', responsiveWidth)}>
+          <H1
+            icon={<Users className={h1IconClasses} strokeWidth={1.5} />}
+            subtitle="Conheça a tripulação do nosso voo"
+          >
+            Pais e Padrinhos
+          </H1>
+        </a>
       </div>
     </div >
   )
