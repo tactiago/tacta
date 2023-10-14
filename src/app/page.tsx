@@ -45,14 +45,14 @@ export default function Home() {
             subtitle={weddingLocation}
           >Local da Cerimônia & Festa</H1>
           <iframe
-            className={cn('h-[50vh]', responsiveWidth)}
+            className={cn('h-[50vh] px-2', responsiveWidth)}
             src="https://maps.google.com/maps?hl=pt&amp;q=Recanto%20Santa%20Barbara+(Title)&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed"
             scrolling="no"
           ></iframe>
         </div>
       </div>
 
-      <div className='py-8 border border-dashed w-full flex flex-col gap-2 items-center justify-center'>
+      <div className='py-8 px-2 border border-dashed flex flex-col gap-2 items-center justify-center'>
         <a href="/Gifts" className={cn('flex items-center justify-center flex-col hover:bg-secondary/10 rounded-lg border p-4 mx-4', responsiveWidth)}>
           <H1
             icon={<Gift className={h1IconClasses} strokeWidth={1.5} />}
@@ -68,6 +68,15 @@ export default function Home() {
             subtitle="Conheça a tripulação do nosso voo"
           >
             Pais e Padrinhos
+          </H1>
+        </a>
+
+        <a href="/WhenAndWhere" className={cn('flex items-center justify-center flex-col hover:bg-secondary/10 rounded-lg border p-4 mx-4', responsiveWidth)}>
+          <H1
+            icon={<CalendarHeart className={h1IconClasses} strokeWidth={1.5} />}
+            subtitle="Para garantir seu lugar a bordo, reserve a data de embarque em sua agenda."
+          >
+            Quando e Onde
           </H1>
         </a>
       </div>
