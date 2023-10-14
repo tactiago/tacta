@@ -77,7 +77,8 @@ export default function WhenAndWhere() {
         </Tabs>
       </div>
 
-      <div className="flex flex-col items-center my-4 gap-2">
+      <div className="flex flex-col items-center my-4">
+
         <H1
           icon={<Map className={h1IconClasses} strokeWidth={1.5} />}
           subtitle="A escolha desse destino foi amor à primeira vista<br />A cerimônia e a festa serão no mesmo local."
@@ -85,27 +86,29 @@ export default function WhenAndWhere() {
           Local
         </H1>
 
-        <CopyToClipboard text={weddingLocation}
-          onCopy={() => { setWasCopied(true) }}>
-          <Button variant="outline" className={cn("h-auto text-left mx-2", (wasCopied ? " border-emerald-400" : ""))}>
-            {weddingLocation}
-            {wasCopied ? <CheckCircle className="w-5 h-5 ml-2 text-emerald-400" /> : <Copy className="w-5 h-5 ml-2" />}
-          </Button>
-        </CopyToClipboard>
+        <div className="flex flex-col items-center gap-2">
+          <CopyToClipboard text={weddingLocation}
+            onCopy={() => { setWasCopied(true) }}>
+            <Button variant="outline" className={cn("h-auto text-left mx-2", (wasCopied ? " border-emerald-400" : ""))}>
+              {weddingLocation}
+              {wasCopied ? <CheckCircle className="w-5 h-5 ml-2 text-emerald-400" /> : <Copy className="w-5 h-5 ml-2" />}
+            </Button>
+          </CopyToClipboard>
 
-        <iframe
-          className={cn('h-[50vh] px-2', responsiveWidth)}
-          src="https://maps.google.com/maps?hl=pt&amp;q=Recanto%20Santa%20Barbara+(Title)&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed"
-          scrolling="no"
-        ></iframe>
+          <iframe
+            className={cn('h-[50vh] px-2', responsiveWidth)}
+            src="https://maps.google.com/maps?hl=pt&amp;q=Recanto%20Santa%20Barbara+(Title)&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed"
+            scrolling="no"
+          ></iframe>
 
-        <Image
-          src="https://www.rsbarbara.com.br/explorer/galeria/7_800x600.jpg"
-          className='aspect-video object-cover'
-          alt="Recanto Santa Bárbara"
-          width={800}
-          height={600}
-        />
+          <Image
+            src="https://www.rsbarbara.com.br/explorer/galeria/7_800x600.jpg"
+            className='aspect-video object-cover'
+            alt="Recanto Santa Bárbara"
+            width={800}
+            height={600}
+          />
+        </div>
       </div>
     </div>
   )
