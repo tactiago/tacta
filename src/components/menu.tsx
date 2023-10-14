@@ -7,7 +7,7 @@ import {
   MenubarShortcut,
   MenubarTrigger,
 } from "@/components/ui/menubar"
-import { CalendarClock, CalendarHeart, CheckSquare, Gem, Gift, Heart, Home, MenuIcon, Ratio, SearchCheck, Send, Shirt, Ticket, UserCheck, Users } from "lucide-react"
+import { CalendarClock, CalendarHeart, CheckSquare, Flag, Gift, Heart, Home, MenuIcon, Ratio, SearchCheck, Send, Shirt, Ticket, UserCheck, Users } from "lucide-react"
 
 export default function Menu() {
   return (
@@ -57,9 +57,9 @@ export default function Menu() {
               <Gift className='h-5 w-5 text-primary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm">Presentes</span></MenubarShortcut>
             </MenubarItem>
           </a>
-          <a href="/WorkInProgress">
+          <a href="/HoneymoonBet">
             <MenubarItem>
-              <Gem className='h-5 w-5 text-primary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm">Bolão Lua de Mel</span></MenubarShortcut>
+              <Flag className='h-5 w-5 text-primary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm">Bolão Lua de Mel</span></MenubarShortcut>
             </MenubarItem>
           </a>
           <a href="/WorkInProgress">

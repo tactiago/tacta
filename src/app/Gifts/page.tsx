@@ -48,7 +48,7 @@ export default function Gifts() {
 
       <div className="flex flex-col items-center my-4 mx-4 border border-primary rounded-lg md:p-2 lg:p-4 sm:p-2 p-2">
         <p className="text-lg font-bold text-center mb-2">Não sabe o que dar de presente pros noivos?</p>
-        <Button variant="default">Participe do Bolão</Button>
+        <Button variant="default"><a href="/HoneymoonBet">Participe do Bolão</a></Button>
       </div>
 
       {
