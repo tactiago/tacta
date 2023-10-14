@@ -33,15 +33,7 @@ export default function AddToCalendar(props: AddToCalendarProps) {
       "END:VCALENDAR"
     ].join("\n");
 
-    let blob = new Blob([url], { type: 'text/calendar;charset=utf-8' });
-
-    if (/msie\s|trident\/|edge\//i.test(window.navigator.userAgent)) {
-      // Open/Save link in IE and Edge
-      window.navigator.msSaveBlob(blob, 'download.ics');
-    } else {
-      // Open/Save link in Modern Browsers
-      window.open(encodeURI("data:text/calendar;charset=utf8," + url));
-    }
+    window.open(encodeURI("data:text/calendar;charset=utf8," + url));
   }
 
   function formatDate(dateString: string | Date) {
