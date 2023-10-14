@@ -10,7 +10,13 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'instagram.fcgh51-1.fna.fbcdn.net',
+        hostname: 'instagram.**.fbcdn.net',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.rsbarbara.com.br',
         port: '',
         pathname: '/**',
       },
