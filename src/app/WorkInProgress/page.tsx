@@ -9,7 +9,7 @@ export default function NotFound() {
     <div className={cn("flex justify-center flex-col items-center gap-2 px-2", responsiveWidth)}>
       <H1
         icon={<Construction className={h1IconClasses} strokeWidth={1.5} />}
-        subtitle="O Tiago está trabalhando árduamente pra construir essa página."
+        subtitle="O Tiago está trabalhando arduamente pra construir essa página."
       >
         Trabalho em progresso
       </H1>
