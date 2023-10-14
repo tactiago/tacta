@@ -1,7 +1,7 @@
 "use client"
 
 import Card, { formatPriceInPtBR } from "@/components/gifts/card";
-import { Gift } from "lucide-react";
+import { Gift, ShoppingBag } from "lucide-react";
 import { responsiveWidth } from "../page";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
@@ -12,9 +12,12 @@ import { giftsList } from "./gifts";
 
 export default function Gifts() {
   const [total, setTotal] = useState(0)
+  const [quantity, setQuantity] = useState(0)
+  const [message, setMessage] = useState("")
 
   function sumToTotal(value: number) {
     setTotal(total + value)
+    setQuantity(quantity + (value > 0 ? 1 : -1))
   }
 
   return (
@@ -22,7 +25,7 @@ export default function Gifts() {
       <div className="flex flex-col items-center my-4">
         <H1
           icon={<Gift className={h1IconClasses} strokeWidth={1.5} />}
-          subtitle="Escolha tudo o gostaria de presentear os noivo"
+          subtitle="Escolha tudo o gostaria de presentear os noivos"
         >
           Presentes
         </H1>
@@ -50,10 +53,21 @@ export default function Gifts() {
 
       {
         total > 0 && (
-          <div className="w-screen max-w-screen border-b sticky bottom-0 z-50 flex justify-center bg-emerald-400">
-            <div className={cn('flex justify-evenly items-center py-2 px-4', responsiveWidth)}>
-              <span className="text-white font-bold md:text-lg sm:text-lg text-sm">{formatPriceInPtBR(total)}</span>
-              <PixDialog total={total} />
+          <div className="w-screen max-w-screen border-b sticky bottom-0 z-50 flex justify-center bg-emerald-400 h-fit pb-2">
+            <div className={cn('grid grid-cols-3 gap-2 my-2 px-4 h-auto ', responsiveWidth)}>
+              <span className="text-white font-bold col-span-2 md:text-lg sm:text-lg text-sm flex items-end sm:items-center ml-2">
+                {formatPriceInPtBR(total)} <ShoppingBag className="mx-1" strokeWidth={1.5} />{quantity}
+              </span>
+              <div className="flex items-center justify-center row-span-2">
+                <PixDialog total={total} message={message} />
+              </div>
+              <input
+                type="text"
+                className="bg-transparent col-span-2 border-b placeholder:text-muted placeholder:text-sm text-sm text-white px-2 sm:mr-4"
+                placeholder="Mensagem pra eles..."
+                value={message}
+                onChange={(e) => setMessage(e.currentTarget.value)}
+              />
             </div>
           </div>
         )

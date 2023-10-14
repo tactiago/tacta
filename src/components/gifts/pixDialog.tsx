@@ -16,21 +16,25 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button";
+import { formatPriceInPtBR } from "./card";
 
 type pixDialogProps = {
   total: number
+  message?: string
 }
 
-export default function PixDialog({ total }: pixDialogProps) {
+export default function PixDialog({ total, message }: pixDialogProps) {
   const [wasCopied, setWasCopied] = useState(false)
   const [qrCodeImage, setQrCodeImage] = useState<string>("")
+
+  message = message || 'Desejo muitas felicidades a vocês, Thais & Tiago :)'
 
   const qrCodePix = QrCodePix({
     version: '01',
     key: '43986337822', //or any PIX key
     name: 'Tiago Almeida Cardoso',
     city: 'SAO PAULO',
-    message: 'Desejo muitas felicidades a vocês, Thais & Tiago :)',
+    message: message,
     value: total,
   });
 
@@ -44,10 +48,13 @@ export default function PixDialog({ total }: pixDialogProps) {
 
   return (
     <Dialog>
-      <DialogTrigger>
-        <Button variant="outline" className="font-bold md:text-lg sm:text-lg text-sm text-white" onClick={() => { setWasCopied(false) }}>Presentear <Gift className='h-5 w-5 ml-2' strokeWidth={1.5} /></Button>
+      <DialogTrigger
+        onClick={() => { setWasCopied(false) }}
+        className="font-bold md:text-lg sm:text-lg text-sm text-white flex flex-row items-center py-2 px-4 border border-white rounded-lg w-fit h-fit hover:bg-secondary/10 transition"
+      >
+        <Gift className='h-5 w-5 sm:mr-2' strokeWidth={1.5} /> <p className="hidden sm:block">Presentear</p>
       </DialogTrigger>
-      <DialogContent>
+      <DialogContent className="max-w-[90vw] sm:max-w-[50vw] md:max-w-[35vw]">
         <DialogHeader>
           <DialogTitle>Agora é só fazer o Pix</DialogTitle>
           <DialogDescription>
@@ -55,6 +62,8 @@ export default function PixDialog({ total }: pixDialogProps) {
           </DialogDescription>
         </DialogHeader>
         <div className="flex flex-col items-center">
+          <span className="text-emerald-600 font-semibold mb-1">{formatPriceInPtBR(total)}</span>
+          <p className="text-center border rounded-lg py-1 px-2">&ldquo; {message} &rdquo;</p>
           <div className="w-40 h-40 lg:w-60 lg:h-60">
             <Image unoptimized src={qrCodeImage} height={1000} width={1000} alt="QR Code" />
           </div>
