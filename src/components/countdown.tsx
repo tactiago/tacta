@@ -40,7 +40,7 @@ export default function Countdown() {
   }, [deadline]);
 
   return (
-    <div className="flex flex-row gap-5 text-base lg:text-lg font-semibold">
+    <div className="flex flex-row gap-3 sm:gap-5 text-base lg:text-lg font-semibold">
       <div className="flex flex-col items-center"><span>{leading0(days)}</span> <p className="font-light">Dias</p></div>
       <div className="flex flex-col items-center"><span>{leading0(hours)}</span> <p className="font-light">Horas</p></div>
       <div className="flex flex-col items-center"><span>{leading0(minutes)}</span> <p className="font-light">Minutos</p></div>
