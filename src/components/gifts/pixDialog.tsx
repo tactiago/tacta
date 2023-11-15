@@ -58,7 +58,7 @@ export default function PixDialog({ total, message }: pixDialogProps) {
         <DialogHeader>
           <DialogTitle>Agora é só fazer o Pix</DialogTitle>
           <DialogDescription>
-            <p>No aplicativo do banco, você pode escanear o QR Code  ou copiar e colar</p>
+            No aplicativo do banco, você pode escanear o QR Code  ou copiar e colar
           </DialogDescription>
         </DialogHeader>
         <div className="flex flex-col items-center">
