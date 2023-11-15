@@ -1,7 +1,7 @@
 import { CrewCardProps } from "@/components/crew/card";
 
 
-export const crew:CrewCardProps[] = [
+export const crew: CrewCardProps[] = [
   {
     gender: "male",
     name: "Bruno Cardoso",
@@ -44,7 +44,7 @@ export const crew:CrewCardProps[] = [
     role: "padrinho",
     side: "his",
     photoUrl: "/crew/ac.png",
-    instagramUsername: "alisonbessa",
+    instagramUsername: "",
     about: "Rei do gado e avô do Tiago.",
   },
   {
