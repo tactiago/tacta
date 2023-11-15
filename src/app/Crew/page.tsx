@@ -15,7 +15,7 @@ export default function Crew() {
         </H1>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 gap-y-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-2 gap-y-4 place-content-center max-w-sm sm:max-w-full md:max-w-3xl lg:max-w-4xl">
         {
           crew.map((person, index) => {
             return (
