@@ -26,7 +26,7 @@ export default function Menu() {
           <MenubarItem disabled>
             <b className="font-bold text-primary">Nossa Tripulação</b>
           </MenubarItem>
-          <a href="/WorkInProgress">
+          <a href="/Captains">
             <MenubarItem>
               <Heart className='h-5 w-5 text-primary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm">Os Noivos</span></MenubarShortcut>
             </MenubarItem>

@@ -80,6 +80,9 @@ module.exports = {
       },
       dropShadow: {
         'white': '0 1px 2px rgba(255, 255, 255, 0.25)',
+      },
+      scale: {
+        '-100': '-1'
       }
     },
   },
