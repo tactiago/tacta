@@ -21,9 +21,11 @@ import { formatPriceInPtBR } from "./card";
 type pixDialogProps = {
   total: number
   message?: string
+  onConfirmMessage?: () => void
 }
 
-export default function PixDialog({ total, message }: pixDialogProps) {
+export default function PixDialog({ total, message, onConfirmMessage = () => { } }: pixDialogProps) {
+  const [isDialogOpen, setIsDialogOpen] = useState(false)
   const [wasCopied, setWasCopied] = useState(false)
   const [qrCodeImage, setQrCodeImage] = useState<string>("")
 
@@ -34,7 +36,7 @@ export default function PixDialog({ total, message }: pixDialogProps) {
     key: '43986337822', //or any PIX key
     name: 'Tiago Almeida Cardoso',
     city: 'SAO PAULO',
-    message: message,
+    message: "",
     value: total,
   });
 
@@ -46,11 +48,18 @@ export default function PixDialog({ total, message }: pixDialogProps) {
     fetchImage()
   }, [qrCodePix])
 
+  function handleOpenChange(newIsDialogOpen: boolean) {
+    if (!newIsDialogOpen) {
+      onConfirmMessage()
+    }
+    setIsDialogOpen(newIsDialogOpen)
+  }
+
   return (
-    <Dialog>
+    <Dialog open={isDialogOpen} onOpenChange={(newIsDialogOpen) => handleOpenChange(newIsDialogOpen)}>
       <DialogTrigger
-        onClick={() => { setWasCopied(false) }}
-        className="font-bold md:text-lg sm:text-lg text-sm text-white flex flex-row items-center py-2 px-4 border border-white rounded-lg w-fit h-fit hover:bg-secondary/10 transition"
+        onClick={() => setWasCopied(false)}
+        className="font-bold md:text-lg sm:text-lg text-sm text-white flex flex-row items-center py-2 px-4 border border-white rounded-lg w-fit h-fit bg-emerald-400 hover:bg-emerald-500 transition"
       >
         <Gift className='h-5 w-5 sm:mr-2' strokeWidth={1.5} /> <p className="hidden sm:block">Presentear</p>
       </DialogTrigger>

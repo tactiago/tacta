@@ -9,15 +9,17 @@ import PixDialog from "@/components/gifts/pixDialog";
 import { Button } from "@/components/ui/button";
 import H1, { h1IconClasses } from "@/components/content/h1";
 import { giftsList } from "./gifts";
+import MessageDialog from "@/components/gifts/messageDialog";
 
 export default function Gifts() {
   const [total, setTotal] = useState(0)
   const [quantity, setQuantity] = useState(0)
-  const [message, setMessage] = useState("")
 
   function sumToTotal(value: number) {
     setTotal(total + value)
-    setQuantity(quantity + (value > 0 ? 1 : -1))
+    setQuantity((state) => {
+      return state + (value > 0 ? 1 : -1)
+    })
   }
 
   return (
@@ -53,21 +55,14 @@ export default function Gifts() {
 
       {
         total > 0 && (
-          <div className="w-screen max-w-screen border-b sticky bottom-0 z-50 flex justify-center bg-emerald-400 h-fit pb-2">
-            <div className={cn('grid grid-cols-3 gap-2 my-2 px-4 h-auto ', responsiveWidth)}>
-              <span className="text-white font-bold col-span-2 md:text-lg sm:text-lg text-sm flex items-end sm:items-center ml-2">
-                {formatPriceInPtBR(total)} <ShoppingBag className="mx-1" strokeWidth={1.5} />{quantity}
+          <div className="w-screen max-w-screen sticky bottom-0 z-50 flex justify-center bg-emerald-400 h-fit sm:py-3 py-2">
+            <div className={cn('flex justify-evenly items-center gap-x-6 h-auto', responsiveWidth)}>
+              <span className="text-white md:text-lg sm:text-lg text-base flex items-end sm:items-center">
+                {formatPriceInPtBR(total)} <ShoppingBag className="mx-2 mb-1" strokeWidth={1.5} />{quantity}
               </span>
-              <div className="flex items-center justify-center row-span-2">
-                <PixDialog total={total} message={message} />
+              <div className="flex items-center justify-center">
+                <MessageDialog total={total} />
               </div>
-              <input
-                type="text"
-                className="bg-transparent col-span-2 border-b placeholder:text-muted placeholder:text-sm text-sm text-white px-2 sm:mr-4"
-                placeholder="Mensagem pra eles..."
-                value={message}
-                onChange={(e) => setMessage(e.currentTarget.value)}
-              />
             </div>
           </div>
         )
