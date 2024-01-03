@@ -3,6 +3,7 @@ import { Construction, Home } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { responsiveWidth } from "../page";
+import Link from "next/link";
 
 export default function NotFound() {
   return (
@@ -15,9 +16,9 @@ export default function NotFound() {
       </H1>
 
       <Button variant="outline">
-        <a href="/" className="flex items-center gap-2 justify-center">
+        <Link href="/" className="flex items-center gap-2 justify-center">
           <Home className="text-muted-foreground" strokeWidth={1.5} /> Volte ao Início
-        </a>
+        </Link>
       </Button>
     </div>
   );
