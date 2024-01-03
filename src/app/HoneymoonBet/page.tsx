@@ -1,22 +1,50 @@
 "use client"
 
-import CountryCard, { formatPriceInPtBR } from "@/components/gifts/card";
-import { Flag, Info, ShoppingBag } from "lucide-react";
-import { responsiveWidth } from "../page";
-import { cn } from "@/lib/utils";
 import { useState } from "react";
-import PixDialog from "@/components/gifts/pixDialog";
+import { Flag, Info, ShoppingBag } from "lucide-react";
+
+import { responsiveWidth } from "../page";
+
+import { cn, formatPriceInPtBR } from "@/lib/utils";
 import H1, { h1IconClasses } from "@/components/content/h1";
+
 import { countryList } from "./countries";
+import GamblerDialog from "@/components/honeymoonBet/gamblerDialog";
+import CountryCard from "@/components/honeymoonBet/card";
+
+export type Country = {
+  id: string
+  title: string
+  imageSrc: string
+  price: number
+}
 
 export default function Gifts() {
-  const [total, setTotal] = useState(0)
-  const [quantity, setQuantity] = useState(0)
-  const [name, setName] = useState("")
+  const [selectedCountries, setSelectedCountries] = useState<Country[]>([])
 
-  function sumToTotal(value: number) {
-    setTotal(total + value)
-    setQuantity(quantity + (value > 0 ? 1 : -1))
+  const quantity = selectedCountries.length
+  const total = selectedCountries.reduce((accumulator, { price }) => {
+    return accumulator + price
+  }, 0)
+
+  function handleChangeCountrySelection(country: Country, isSelected: boolean) {
+    if (isSelected) {
+      addCountryToSelection(country)
+    } else if (isSelected === false) {
+      deleteCountryToSelection(country)
+    }
+  }
+
+  function addCountryToSelection(countryToAdd: Country) {
+    setSelectedCountries([...selectedCountries, countryToAdd])
+  }
+
+  function deleteCountryToSelection(countryToDelete: Country) {
+    const countriesWithoutDeletedOne = selectedCountries.filter((country) => {
+      return country !== countryToDelete
+    })
+
+    setSelectedCountries(countriesWithoutDeletedOne)
   }
 
   return (
@@ -42,14 +70,12 @@ export default function Gifts() {
 
       <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-4">
         {
-          countryList.map((country, index) => {
+          countryList.map((country) => {
             return (
               <CountryCard
-                imageSrc={country.imageSrc}
-                title={country.title}
-                price={country.price}
-                sumToTotal={sumToTotal}
-                key={index} />
+                country={country}
+                handleChangeCountrySelection={handleChangeCountrySelection}
+                key={country.id} />
             )
           })
         }
@@ -57,21 +83,14 @@ export default function Gifts() {
 
       {
         total > 0 && (
-          <div className="w-screen max-w-screen border-b sticky bottom-0 z-50 flex justify-center bg-emerald-400 h-fit pb-2">
-            <div className={cn('grid grid-cols-3 gap-2 my-2 px-4 h-auto ', responsiveWidth)}>
-              <span className="text-white font-bold col-span-2 md:text-lg sm:text-lg text-sm flex items-end sm:items-center ml-2">
+          <div className="w-screen max-w-screen sticky bottom-0 z-50 flex justify-center bg-emerald-400 h-fit sm:py-3 py-2">
+            <div className={cn('flex justify-evenly items-center gap-x-6 h-auto', responsiveWidth)}>
+              <span className="text-white md:text-lg sm:text-lg text-base flex items-end sm:items-center">
                 {formatPriceInPtBR(total)} <ShoppingBag className="mx-1" strokeWidth={1.5} />{quantity}
               </span>
               <div className="flex items-center justify-center row-span-2">
-                <PixDialog total={total} message={name} />
+                <GamblerDialog total={total} selectedCountries={selectedCountries} />
               </div>
-              <input
-                type="text"
-                className="bg-transparent col-span-2 border-b placeholder:text-muted placeholder:text-sm text-sm text-white px-2 sm:mr-4"
-                placeholder="Seu nome e sobrenome..."
-                value={name}
-                onChange={(e) => setName(e.currentTarget.value)}
-              />
             </div>
           </div>
         )
