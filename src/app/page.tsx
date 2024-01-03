@@ -6,6 +6,7 @@ import { CalendarHeart, Gift, Map, Users } from 'lucide-react'
 import Image from 'next/image'
 import { addHours } from 'date-fns'
 import { weddingDay, weddingLocation } from './WhenAndWhere/details'
+import Link from 'next/link'
 
 export const responsiveWidth = "w-screen md:w-[70vw] lg:w-[60vw]"
 
@@ -13,7 +14,7 @@ export default function Home() {
   return (
     <div className="grid grid-cols-1">
       <div className="relative w-screen aspect-video flex justify-center">
-        <Image src="/Segura.jpg" className='absolute object-cover max-w-[100vw]' fill alt={"Cambio"}></Image>
+        <Image src="/Segura.jpg" className='absolute object-cover max-w-[100vw]' fill alt={"Cambio"} priority={false}></Image>
         <div className={cn('absolute top-0 h-full flex items-end pb-12', responsiveWidth)}>
           <div className='flex flex-col justify-center pl-4'>
             <span className='font-semibold text-xs md:text-lg lg:text-2xl xl:text-3xl drop-shadow text-secondary leading-relaxed'>12 de maio de 2024</span>
@@ -53,32 +54,32 @@ export default function Home() {
       </div>
 
       <div className='py-8 px-2 border border-dashed flex flex-col gap-2 items-center justify-center'>
-        <a href="/Gifts" className={cn('flex items-center justify-center flex-col hover:bg-secondary/10 rounded-lg border p-4 mx-4', responsiveWidth)}>
+        <Link href="/Gifts" className={cn('flex items-center justify-center flex-col hover:bg-secondary/10 rounded-lg border p-4 mx-4', responsiveWidth)}>
           <H1
             icon={<Gift className={h1IconClasses} strokeWidth={1.5} />}
             subtitle="Escolha tudo o gostaria de presentear os noivos"
           >
             Presentes
           </H1>
-        </a>
+        </Link>
 
-        <a href="/Crew" className={cn('flex items-center justify-center flex-col hover:bg-secondary/10 rounded-lg border p-4 mx-4', responsiveWidth)}>
+        <Link href="/Crew" className={cn('flex items-center justify-center flex-col hover:bg-secondary/10 rounded-lg border p-4 mx-4', responsiveWidth)}>
           <H1
             icon={<Users className={h1IconClasses} strokeWidth={1.5} />}
             subtitle="Conheça a tripulação do nosso voo"
           >
             Pais e Padrinhos
           </H1>
-        </a>
+        </Link>
 
-        <a href="/WhenAndWhere" className={cn('flex items-center justify-center flex-col hover:bg-secondary/10 rounded-lg border p-4 mx-4', responsiveWidth)}>
+        <Link href="/WhenAndWhere" className={cn('flex items-center justify-center flex-col hover:bg-secondary/10 rounded-lg border p-4 mx-4', responsiveWidth)}>
           <H1
             icon={<CalendarHeart className={h1IconClasses} strokeWidth={1.5} />}
             subtitle="Para garantir seu lugar a bordo, reserve a data de embarque em sua agenda."
           >
             Quando e Onde
           </H1>
-        </a>
+        </Link>
       </div>
     </div >
   )
