@@ -1,15 +1,15 @@
 "use client"
 
-import Card, { formatPriceInPtBR } from "@/components/gifts/card";
+import Card from "@/components/gifts/card";
 import { Gift, ShoppingBag } from "lucide-react";
 import { responsiveWidth } from "../page";
-import { cn } from "@/lib/utils";
+import { cn, formatPriceInPtBR } from "@/lib/utils";
 import { useState } from "react";
-import PixDialog from "@/components/gifts/pixDialog";
 import { Button } from "@/components/ui/button";
 import H1, { h1IconClasses } from "@/components/content/h1";
 import { giftsList } from "./gifts";
 import MessageDialog from "@/components/gifts/messageDialog";
+import Link from "next/link";
 
 export default function Gifts() {
   const [total, setTotal] = useState(0)
@@ -42,7 +42,8 @@ export default function Gifts() {
                 title={gift.title}
                 price={gift.price}
                 sumToTotal={sumToTotal}
-                key={index} />
+                key={index}
+              />
             )
           })
         }
@@ -50,7 +51,7 @@ export default function Gifts() {
 
       <div className="flex flex-col items-center my-4 mx-4 border border-primary rounded-lg md:p-2 lg:p-4 sm:p-2 p-2">
         <p className="text-lg font-bold text-center mb-2">Onde os noivos vão na Lua de Mel?</p>
-        <Button variant="default"><a href="/HoneymoonBet">Participe do Bolão</a></Button>
+        <Button variant="default"><Link href="/HoneymoonBet">Participe do Bolão</Link></Button>
       </div>
 
       {

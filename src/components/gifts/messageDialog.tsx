@@ -5,7 +5,6 @@ import { Gift } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "../ui/dialog";
 import { Textarea } from "../ui/textarea";
 import PixDialog from "./pixDialog";
-import { Input } from "../ui/input";
 
 interface messageDialogProps {
   total: number
@@ -59,7 +58,7 @@ export default function MessageDialog({ total }: messageDialogProps) {
         </div>
 
         <DialogFooter>
-          <PixDialog total={total} message={message + " Com carinho: " + messageFrom} onConfirmMessage={closeDialog} />
+          <PixDialog total={total} message={message} from={messageFrom} onConfirmMessage={closeDialog} />
         </DialogFooter>
       </DialogContent>
     </Dialog>

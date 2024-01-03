@@ -1,9 +1,9 @@
 "use client"
 
-import { Check, CheckCircle, CircleDashed } from "lucide-react"
+import { formatPriceInPtBR } from "@/lib/utils"
+import { CheckCircle, CircleDashed } from "lucide-react"
 import Image from "next/image"
 import { useState } from "react"
-import { Button } from "../ui/button"
 
 type cardProps = {
   imageSrc: string
@@ -13,17 +13,7 @@ type cardProps = {
   sumToTotal: (value: number) => void
 }
 
-export function formatPriceInPtBR(price: number) {
-  const formatter = new Intl.NumberFormat('pt-BR', {
-    style: 'currency',
-    currency: 'BRL',
-    minimumFractionDigits: 2,
-  });
-
-  return formatter.format(price);
-}
-
-export default function Card({ imageSrc, title, price, selected = false, sumToTotal }: cardProps) {
+export default function CountryCard({ imageSrc, title, price, selected = false, sumToTotal }: cardProps) {
   const [isSelected, setIsSelected] = useState(selected)
 
   function handleSelectGiftCard() {
