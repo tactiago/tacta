@@ -9,7 +9,7 @@ export const crew: CrewCardProps[] = [
     side: "his",
     photoUrl: "/crew/bruno.jpg",
     instagramUsername: "brunocardoso.bc",
-    about: "Muito confundido como irmão do Tiago.",
+    about: "O pai babão, entusiasta de tecnologias e frequentemente confundido como irmão do Tiago, provando que a juventude está no coração, não no RG.",
   },
   {
     gender: "female",
@@ -18,7 +18,7 @@ export const crew: CrewCardProps[] = [
     side: "his",
     photoUrl: "/crew/karine.jpg",
     instagramUsername: "karinecakerber",
-    about: "A novinha!",
+    about: "Mãezona, bailarina animadora da pista de dança e a novinha que nos ensina que a idade é só um detalhe quando se trata de aproveitar a vida.",
   },
   {
     gender: "male",
@@ -27,7 +27,7 @@ export const crew: CrewCardProps[] = [
     side: "her",
     photoUrl: "/crew/jo.png",
     instagramUsername: "",
-    about: "Cabra macho!",
+    about: "Cabra Macho, pai pra toda obra, também conhecido como Nildo.",
   },
   {
     gender: "female",
@@ -36,7 +36,7 @@ export const crew: CrewCardProps[] = [
     side: "her",
     photoUrl: "/crew/patricia.jpg",
     instagramUsername: "patriciadcss",
-    about: "Glamurosa!",
+    about: "Patty, Mãe leoa, eternamente jovem, com uma risada icônica que faz cada momento mais leve e divertido.",
   },
   {
     gender: "male",
@@ -81,7 +81,7 @@ export const crew: CrewCardProps[] = [
     side: "her",
     photoUrl: "/crew/pedro.png",
     instagramUsername: "",
-    about: "Mais conhecido como Pedro da Manga, avô da Thaís",
+    about: "A noiva é a sua fofinha, mais conhecido como Pedro da Manga, o avô da noiva.",
   },
   {
     gender: "female",
@@ -90,7 +90,7 @@ export const crew: CrewCardProps[] = [
     side: "her",
     photoUrl: "/crew/risomar.png",
     instagramUsername: "",
-    about: "Federal e avó da Thaís",
+    about: "Federal, onde a noiva é seu rubi, mais conhecida carinhosamente como Sorriso, a maga dos momentos icônicos na família Castro, avó da noiva.",
   },
   {
     gender: "male",
@@ -99,7 +99,7 @@ export const crew: CrewCardProps[] = [
     side: "her",
     photoUrl: "/crew/wesley.jpg",
     instagramUsername: "wesleyfurtado5",
-    about: "Um dos grandes amigos de João Pessoa da Thaís.",
+    about: "Companheiro de risadas e detentor do título de 'Melhor mediador de conflitos', é o grande amigo da noiva que torna cada desafio mais leve com seu bom humor contagiante.",
   },
   {
     gender: "female",
@@ -108,6 +108,6 @@ export const crew: CrewCardProps[] = [
     side: "her",
     photoUrl: "/crew/juliana.jpg",
     instagramUsername: "juliananunesc_",
-    about: "Uma das grandes amigas de João Pessoa da Thaís.",
+    about: "Grande amiga da noiva, que considera a noiva como seu smurf. Também conhecida como avatar (pela noiva) - a parceira perfeita para aventuras e risadas.",
   },
 ]
