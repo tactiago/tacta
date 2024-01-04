@@ -1,6 +1,6 @@
 "use client"
 
-import { CalendarHeart, CheckCircle, Copy, Map } from "lucide-react";
+import { CalendarHeart, CheckCircle, Copy, Map, PartyPopperIcon, TheaterIcon } from "lucide-react";
 
 import H1, { h1IconClasses } from "@/components/content/h1";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -26,8 +26,8 @@ export default function WhenAndWhere() {
   };
 
   return (
-    <div className="flex flex-col items-center">
-      <div className="flex flex-col items-center my-4">
+    <div className="flex flex-col items-center gap-4">
+      <div className="flex flex-col items-center pt-4">
         <H1
           icon={<CalendarHeart className={h1IconClasses} strokeWidth={1.5} />}
           subtitle="Voo confirmado para 12 de Maio de 2024.<br />Para garantir seu lugar a bordo, reserve a data de embarque em sua agenda."
@@ -52,33 +52,32 @@ export default function WhenAndWhere() {
             description="Chegue com antecedência para esse voo inesquecível. Mais informações em: tacta-one.vercel.app"
           />
         </div>
-
-        <Tabs defaultValue="cerimony" className={cn(responsiveWidth, "border-b py-4 px-2 rounded-xl ")}>
-          <TabsList className="w-full h-auto mb-2 px-2">
-            <TabsTrigger className="w-full text-base sm:text-lg" value="cerimony">
-              Cerimônia
-            </TabsTrigger>
-            <TabsTrigger className="w-full text-base sm:text-lg" value="party">
-              Festa
-            </TabsTrigger>
-          </TabsList>
-          <TabsContent className="flex flex-col items-center gap-2 mt-0" value="cerimony">
-            <p className="text-primary text-lg">12 de Maio de 2024</p>
-            <span className="font-bold text-lg">15:30</span>
-            <p className="text-destructive underline underline-offset-2">Atenção Tripulação</p>
-            <p className="text-muted-foreground text-center">Em primeiro lugar, contamos com sua pontualidade. Nosso voo para esse dia inesquecível tem horário marcado.<br />Por isso, chegue com antecedência.</p>
-
-          </TabsContent>
-          <TabsContent className="flex flex-col items-center gap-2 mt-0" value="party">
-            <p className="text-primary text-lg">12 de Maio de 2024</p>
-            <span className="font-bold text-lg">16:30</span>
-            <p className="text-destructive">Pontualmente</p>
-          </TabsContent>
-        </Tabs>
       </div>
 
-      <div className="flex flex-col items-center my-4">
+      <div className={cn(responsiveWidth, "flex flex-col items-center border-t pt-4")}>
+        <H1
+          icon={
+            <div className="flex gap-8">
+              <TheaterIcon className={h1IconClasses} strokeWidth={1.5} />
+              <PartyPopperIcon className={h1IconClasses} strokeWidth={1.5} />
+            </div>
+          }
+          subtitle="A escolha desse destino foi amor à primeira vista<br />A cerimônia e a festa serão no mesmo local."
+        >
+          Cerimônia e Festa
+        </H1>
 
+        <div className="flex flex-col items-center gap-2 mt-0">
+          <p className="text-primary text-lg">12 de Maio de 2024</p>
+          <span className="font-bold text-lg">15:00</span>
+          <div className="flex flex-col items-center bg-destructive/10 rounded-lg p-2">
+            <p className="text-destructive underline underline-offset-2">Atenção Tripulação</p>
+            <p className="text-muted-foreground text-center">Em primeiro lugar, contamos com sua pontualidade. Nosso voo para esse dia inesquecível tem horário marcado.<br />Por isso, chegue com antecedência.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col items-center border-t pt-4">
         <H1
           icon={<Map className={h1IconClasses} strokeWidth={1.5} />}
           subtitle="A escolha desse destino foi amor à primeira vista<br />A cerimônia e a festa serão no mesmo local."
