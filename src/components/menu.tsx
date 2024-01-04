@@ -37,11 +37,6 @@ export default function Menu() {
               <Users className='h-5 w-5 text-primary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm">Pais e Padrinhos</span></MenubarShortcut>
             </MenubarItem>
           </Link>
-          <Link href="/WorkInProgress">
-            <MenubarItem>
-              <Send className='h-5 w-5 text-primary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm">Mensagens</span></MenubarShortcut>
-            </MenubarItem>
-          </Link>
 
           <MenubarSeparator />
 
@@ -51,6 +46,11 @@ export default function Menu() {
           <Link href="/WorkInProgress">
             <MenubarItem>
               <SearchCheck className='h-5 w-5 text-primary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm">Indicações</span></MenubarShortcut>
+            </MenubarItem>
+          </Link>
+          <Link href="/Messages">
+            <MenubarItem>
+              <Send className='h-5 w-5 text-primary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm">Mensagens</span></MenubarShortcut>
             </MenubarItem>
           </Link>
           <Link href="/Gifts">
