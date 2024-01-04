@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button";
 import { cn, formatPriceInPtBR } from "@/lib/utils";
-import { Country } from "@/app/HoneymoonBet/page";
+import { Country } from "@/app/(2_FlightPrep)/HoneymoonBet/page";
 
 type pixDialogProps = {
   gambler: string

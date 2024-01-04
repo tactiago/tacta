@@ -4,7 +4,7 @@ import { Gift } from "lucide-react";
 
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "../ui/dialog";
 import PixDialog from "./pixDialog";
-import { Country } from "@/app/HoneymoonBet/page";
+import { Country } from "@/app/(2_FlightPrep)/HoneymoonBet/page";
 import Image from "next/image";
 
 interface messageDialogProps {

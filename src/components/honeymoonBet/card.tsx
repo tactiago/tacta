@@ -3,7 +3,7 @@
 import { CheckCircle, CircleDashed } from "lucide-react"
 import Image from "next/image"
 import { useState } from "react"
-import { Country } from "@/app/HoneymoonBet/page"
+import { Country } from "@/app/(2_FlightPrep)/HoneymoonBet/page"
 import { formatPriceInPtBR } from "@/lib/utils"
 
 type cardProps = {

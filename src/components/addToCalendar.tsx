@@ -1,7 +1,7 @@
 "use client"
 
-import React, { Component } from 'react'
-import { Button } from './ui/button'
+import React from 'react'
+import { Button } from '@/components/ui/button'
 
 type AddToCalendarProps = {
   title: string
