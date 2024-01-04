@@ -27,7 +27,7 @@ export default function Menu() {
           <MenubarItem disabled>
             <b className="font-bold text-primary">Nossa Tripulação</b>
           </MenubarItem>
-          <Link href="/Captains">
+          <Link href="/Captains" >
             <MenubarItem>
               <Heart className='h-5 w-5 text-primary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm">Os Noivos</span></MenubarShortcut>
             </MenubarItem>
@@ -45,7 +45,7 @@ export default function Menu() {
           </MenubarItem>
           <Link href="/WorkInProgress">
             <MenubarItem>
-              <SearchCheck className='h-5 w-5 text-primary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm">Indicações</span></MenubarShortcut>
+              <SearchCheck className='h-5 w-5 text-secondary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm text-secondary text-secondary">Indicações</span></MenubarShortcut>
             </MenubarItem>
           </Link>
           <Link href="/Messages">
@@ -65,7 +65,7 @@ export default function Menu() {
           </Link>
           <Link href="/WorkInProgress">
             <MenubarItem>
-              <CheckSquare className='h-5 w-5 text-primary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm">Confirme sua Presença</span></MenubarShortcut>
+              <CheckSquare className='h-5 w-5 text-secondary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm text-secondary">Confirme sua Presença</span></MenubarShortcut>
             </MenubarItem>
           </Link>
 
@@ -81,27 +81,27 @@ export default function Menu() {
           </Link>
           <Link href="/WorkInProgress">
             <MenubarItem>
-              <Shirt className='h-5 w-5 text-primary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm">O que vestir</span></MenubarShortcut>
+              <Shirt className='h-5 w-5 text-secondary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm text-secondary">O que vestir</span></MenubarShortcut>
             </MenubarItem>
           </Link>
           <Link href="/WorkInProgress">
             <MenubarItem>
-              <CalendarClock className='h-5 w-5 text-primary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm">Cronograma</span></MenubarShortcut>
+              <CalendarClock className='h-5 w-5 text-secondary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm text-secondary">Cronograma</span></MenubarShortcut>
             </MenubarItem>
           </Link>
           <Link href="/WorkInProgress">
             <MenubarItem>
-              <Ticket className='h-5 w-5 text-primary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm">Assentos na Cerimônia</span></MenubarShortcut>
+              <Ticket className='h-5 w-5 text-secondary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm text-secondary">Assentos na Cerimônia</span></MenubarShortcut>
             </MenubarItem>
           </Link>
           <Link href="/WorkInProgress">
             <MenubarItem>
-              <Ratio className='h-5 w-5 text-primary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm">Mesas na Recepção</span></MenubarShortcut>
+              <Ratio className='h-5 w-5 text-secondary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm text-secondary">Mesas na Recepção</span></MenubarShortcut>
             </MenubarItem>
           </Link>
           <Link href="/WorkInProgress">
             <MenubarItem>
-              <UserCheck className='h-5 w-5 text-primary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm">Fornecedores</span></MenubarShortcut>
+              <UserCheck className='h-5 w-5 text-secondary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm text-secondary">Fornecedores</span></MenubarShortcut>
             </MenubarItem>
           </Link>
 
