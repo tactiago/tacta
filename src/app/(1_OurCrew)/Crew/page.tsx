@@ -1,7 +1,7 @@
 import { Users } from "lucide-react";
 import H1, { h1IconClasses } from "@/components/content/h1";
 import CrewCard from "@/components/crew/card";
-import { crew } from "./crew";
+import { crew } from "@/app/(1_OurCrew)/Crew/crew";
 
 export default function Crew() {
   return (

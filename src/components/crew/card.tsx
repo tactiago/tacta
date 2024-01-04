@@ -4,11 +4,10 @@ import Image from "next/image";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Instagram, Info } from "lucide-react";
 
-import blueDress from "../../../public/icons/blue-dress.svg"
-import redDress from "../../../public/icons/red-dress.svg"
-import blueShirtFolded from "../../../public/icons/blue-shirt-folded.svg"
-import redShirtFolded from "../../../public/icons/red-shirt-folded.svg"
-import AboutCrew from "./about";
+import blueDress from "@/../public/icons/blue-dress.svg"
+import redDress from "@/../public/icons/red-dress.svg"
+import blueShirtFolded from "@/../public/icons/blue-shirt-folded.svg"
+import redShirtFolded from "@/../public/icons/red-shirt-folded.svg"
 
 export type CrewCardProps = {
   gender: "male" | "female"

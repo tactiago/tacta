@@ -1,8 +1,7 @@
 import H1, { h1IconClasses } from '@/components/content/h1';
-import prisma from '../../../lib/prisma';
-import { format, formatDistanceToNow } from 'date-fns'
-import ptBR from 'date-fns/locale/pt-BR'
+import prisma from '@/lib/prisma';
 import { TrophyIcon } from 'lucide-react';
+import { formatCreatedDateToPtBr, generateDistanceToNowText } from '@/lib/utils';
 
 const honneymoonLocationId = "ARG"
 
@@ -19,21 +18,6 @@ export default async function Winners() {
       createdAt: 'asc'
     }
   });
-
-  function formatCreatedDateToPtBr(date: Date) {
-    return format(
-      date,
-      "d' de 'LLLL' de 'yyyy', às 'H:mm'h'",
-      { locale: ptBR },
-    )
-  }
-
-  function generateDistanceToNowText(date: Date) {
-    return formatDistanceToNow(date, {
-      locale: ptBR,
-      addSuffix: true,
-    })
-  }
 
   return (
     <div className='flex flex-col items-center my-4 px-2'>

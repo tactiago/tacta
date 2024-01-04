@@ -6,7 +6,7 @@ import H1, { h1IconClasses } from "@/components/content/h1";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Calendar } from "@/components/ui/calendar"
 
-import { responsiveWidth } from "../page";
+import { responsiveWidth } from "@/app/page";
 import { cn } from "@/lib/utils";
 import CopyToClipboard from "react-copy-to-clipboard";
 import { useState } from "react";

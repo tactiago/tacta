@@ -2,7 +2,7 @@ import H1, { h1IconClasses } from "@/components/content/h1";
 import { Construction, Home } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { responsiveWidth } from "../page";
+import { responsiveWidth } from "@/app/page";
 import Link from "next/link";
 
 export default function NotFound() {

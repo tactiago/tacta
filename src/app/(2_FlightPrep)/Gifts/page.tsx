@@ -2,14 +2,14 @@
 
 import Card from "@/components/gifts/card";
 import { Gift, ShoppingBag } from "lucide-react";
-import { responsiveWidth } from "../page";
 import { cn, formatPriceInPtBR } from "@/lib/utils";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import H1, { h1IconClasses } from "@/components/content/h1";
-import { giftsList } from "./gifts";
+import { giftsList } from "@/app/(2_FlightPrep)/Gifts/gifts";
 import MessageDialog from "@/components/gifts/messageDialog";
 import Link from "next/link";
+import { responsiveWidth } from "@/app/page";
 
 export default function Gifts() {
   const [total, setTotal] = useState(0)

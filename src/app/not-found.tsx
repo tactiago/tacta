@@ -1,6 +1,6 @@
 import H1, { h1IconClasses } from "@/components/content/h1";
 import { Home, XCircle } from "lucide-react";
-import { responsiveWidth } from "./page";
+import { responsiveWidth } from "@/app/page";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";

@@ -3,8 +3,8 @@ import { useState } from "react";
 import { Gift } from "lucide-react";
 
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "../ui/dialog";
-import { Textarea } from "../ui/textarea";
-import PixDialog from "./pixDialog";
+import { Textarea } from "@/components/ui/textarea";
+import PixDialog from "@/components/gifts/pixDialog";
 
 interface messageDialogProps {
   total: number

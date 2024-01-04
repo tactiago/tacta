@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils'
 import { CalendarHeart, Gift, Map, Users } from 'lucide-react'
 import Image from 'next/image'
 import { addHours } from 'date-fns'
-import { weddingDay, weddingLocation } from './WhenAndWhere/details'
+import { weddingDay, weddingLocation } from '@/app/(3_TheFlight)/WhenAndWhere/details'
 import Link from 'next/link'
 
 export const responsiveWidth = "w-screen md:w-[70vw] lg:w-[60vw]"

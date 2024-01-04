@@ -3,12 +3,12 @@
 import { useState } from "react";
 import { Flag, Info, ShoppingBag } from "lucide-react";
 
-import { responsiveWidth } from "../page";
+import { responsiveWidth } from "@/app/page";
 
 import { cn, formatPriceInPtBR } from "@/lib/utils";
 import H1, { h1IconClasses } from "@/components/content/h1";
 
-import { countryList } from "./countries";
+import { countryList } from "@/app/(2_FlightPrep)/HoneymoonBet/countries";
 import GamblerDialog from "@/components/honeymoonBet/gamblerDialog";
 import CountryCard from "@/components/honeymoonBet/card";
 
