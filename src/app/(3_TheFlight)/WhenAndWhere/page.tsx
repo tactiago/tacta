@@ -3,7 +3,6 @@
 import { CalendarHeart, CheckCircle, Copy, Map, PartyPopperIcon, TheaterIcon } from "lucide-react";
 
 import H1, { h1IconClasses } from "@/components/content/h1";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Calendar } from "@/components/ui/calendar"
 
 import { responsiveWidth } from "@/app/page";
