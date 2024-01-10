@@ -11,6 +11,8 @@ import H1, { h1IconClasses } from "@/components/content/h1";
 import { countryList } from "@/app/(2_FlightPrep)/HoneymoonBet/countries";
 import GamblerDialog from "@/components/honeymoonBet/gamblerDialog";
 import CountryCard from "@/components/honeymoonBet/card";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export type Country = {
   id: string
@@ -52,19 +54,18 @@ export default function Gifts() {
       <div className="flex flex-col items-center my-4">
         <H1
           icon={<Flag className={h1IconClasses} strokeWidth={1.5} />}
-          subtitle="Pra onde o Tiago vai levar a Thaís?"
+          subtitle="Para onde o Tiago vai levar a Thaís?"
         >
           Bolão da Lua de Mel
         </H1>
       </div>
 
-      <div className="flex flex-row justify-center items-center mb-4 mx-4 border border-primary rounded-lg md:p-2 lg:p-4 sm:p-2 p-2">
+      <div className="flex flex-row justify-center items-center mb-4 mx-4 border border-primary rounded-lg md:p-2 lg:p-4 sm:p-2 p-2 gap-2">
         <Info strokeWidth={1.5} />
         <ul className="list-disc px-6">
           <li>Aposte para onde o casal irá passar a Lua de Mel!</li>
           <li>Essa grande surpresa será revelada durante a festa.</li>
-          <li>Quem acertar receberá um prêmio!</li>
-          <li>Coloque seu nome na barra verde abaixo.</li>
+          <li>Todos que acertarem receberão um prêmio!</li>
         </ul>
       </div>
 
@@ -95,6 +96,11 @@ export default function Gifts() {
           </div>
         )
       }
+
+      <div className="flex flex-col items-center my-4 mx-4 border border-primary rounded-lg md:p-2 lg:p-4 sm:p-2 p-2">
+        <p className="text-lg font-bold text-center mb-2">Saiba onde e quando será o voo!</p>
+        <Button variant="default"><Link href="/WhenAndWhere">Quando e onde</Link></Button>
+      </div>
     </div>
   )
 }
