@@ -79,9 +79,9 @@ export default function Menu() {
               <CalendarHeart className='h-5 w-5 text-primary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm">Quando e Onde</span></MenubarShortcut>
             </MenubarItem>
           </Link>
-          <Link href="/WorkInProgress">
+          <Link href="/DressCode">
             <MenubarItem>
-              <Shirt className='h-5 w-5 text-secondary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm text-secondary">O que vestir</span></MenubarShortcut>
+              <Shirt className='h-5 w-5 text-primary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm">O que vestir</span></MenubarShortcut>
             </MenubarItem>
           </Link>
           <Link href="/WorkInProgress">
