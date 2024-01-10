@@ -3,14 +3,18 @@ import H1, { h1IconClasses } from "@/components/content/h1";
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import Paragraph from "@/components/content/Paragraph";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { responsiveWidth } from "@/app/page";
 
 export default function Captains() {
   return (
-    <div className="flex flex-col items-center px-2">
-      <Card className="overflow-hidden w-[48rem] mt-4">
+    <div className={cn("flex flex-col items-center px-2", responsiveWidth)}>
+      <Card className={cn("overflow-hidden mt-4")}>
         <Image
           src="/Cambio.jpg"
-          className='aspect-video object-cover h-[27rem] w-[48rem] transform -scale-x-100'
+          className='aspect-video object-cover transform -scale-x-100'
           alt="Noivos"
           width={2000}
           height={2000}
@@ -55,6 +59,11 @@ export default function Captains() {
 
         </div>
       </Card>
+
+      <div className="flex flex-col items-center my-4 mx-4 border border-primary rounded-lg md:p-2 lg:p-4 sm:p-2 p-2">
+        <p className="text-lg font-bold text-center mb-2">Conheça a tripulação desse voo!</p>
+        <Button variant="default"><Link href="/Crew">Pais e Padrinhos</Link></Button>
+      </div>
     </div >
   )
 }
