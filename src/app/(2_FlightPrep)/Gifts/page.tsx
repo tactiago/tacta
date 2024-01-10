@@ -27,7 +27,7 @@ export default function Gifts() {
       <div className="flex flex-col items-center my-4">
         <H1
           icon={<Gift className={h1IconClasses} strokeWidth={1.5} />}
-          subtitle="Escolha tudo o gostaria de presentear os noivos"
+          subtitle="Escolha tudo o que gostaria de presentear os noivos"
         >
           Presentes
         </H1>
