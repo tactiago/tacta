@@ -2,7 +2,7 @@ import AddToCalendar from '@/components/addToCalendar'
 import H1, { h1IconClasses } from '@/components/content/h1'
 import Countdown from '@/components/countdown'
 import { cn } from '@/lib/utils'
-import { CalendarHeart, Gift, Map, Users } from 'lucide-react'
+import { CalendarHeart, Gift, Heart, Map, Users } from 'lucide-react'
 import Image from 'next/image'
 import { addHours } from 'date-fns'
 import { weddingDay, weddingLocation } from '@/app/(3_TheFlight)/WhenAndWhere/details'
@@ -54,14 +54,15 @@ export default function Home() {
       </div>
 
       <div className='py-8 px-2 border border-dashed flex flex-col gap-2 items-center justify-center'>
-        <Link href="/Gifts" className={cn('flex items-center justify-center flex-col hover:bg-secondary/10 rounded-lg border p-4 mx-4', responsiveWidth)}>
+        <Link href="/Captains" className={cn('flex items-center justify-center flex-col hover:bg-secondary/10 rounded-lg border p-4 mx-4', responsiveWidth)}>
           <H1
-            icon={<Gift className={h1IconClasses} strokeWidth={1.5} />}
-            subtitle="Escolha tudo o gostaria de presentear os noivos"
+            icon={<Heart className={h1IconClasses} strokeWidth={1.5} />}
+            subtitle="Conheça os comandantes do nosso voo"
           >
-            Presentes
+            Os Noivos
           </H1>
         </Link>
+
 
         <Link href="/Crew" className={cn('flex items-center justify-center flex-col hover:bg-secondary/10 rounded-lg border p-4 mx-4', responsiveWidth)}>
           <H1
@@ -69,6 +70,15 @@ export default function Home() {
             subtitle="Conheça a tripulação do nosso voo"
           >
             Pais e Padrinhos
+          </H1>
+        </Link>
+
+        <Link href="/Gifts" className={cn('flex items-center justify-center flex-col hover:bg-secondary/10 rounded-lg border p-4 mx-4', responsiveWidth)}>
+          <H1
+            icon={<Gift className={h1IconClasses} strokeWidth={1.5} />}
+            subtitle="Escolha tudo o gostaria de presentear os noivos"
+          >
+            Presentes
           </H1>
         </Link>
 
