@@ -7,7 +7,11 @@ import Paragraph from "@/components/content/Paragraph";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
+export const revalidate = 0
+export const dynamic = 'force-dynamic'
+
 export default async function Messages() {
+
 
   const messages = await prisma.gift.findMany({
     orderBy: {
@@ -29,7 +33,7 @@ export default async function Messages() {
           {
             messages.map((message) => {
               return (
-                <div className="w-full bg-secondary p-2 rounded" key={message.id}>
+                <div className="w-full bg-secondary px-4 py-2 rounded" key={message.id}>
                   <div className="flex flex-1 w-full justify-between mb-2">
                     <b className="mr-2">{message.author}</b>
                     <time>{generateDistanceToNowText(message.createdAt)}</time>
