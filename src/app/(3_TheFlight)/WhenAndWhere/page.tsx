@@ -15,6 +15,7 @@ import AddToCalendar from "@/components/addToCalendar";
 import Image from "next/image";
 import { addHours } from "date-fns";
 import { weddingDay, weddingLocation } from "./details";
+import Link from "next/link";
 
 export default function WhenAndWhere() {
   const [wasCopied, setWasCopied] = useState(false)
@@ -25,7 +26,7 @@ export default function WhenAndWhere() {
   };
 
   return (
-    <div className="flex flex-col items-center gap-4">
+    <div className="flex flex-col items-center gap-4 px-2">
       <div className="flex flex-col items-center pt-4">
         <H1
           icon={<CalendarHeart className={h1IconClasses} strokeWidth={1.5} />}
@@ -43,13 +44,15 @@ export default function WhenAndWhere() {
             disabled
           />
           <Countdown />
-          <AddToCalendar
-            title="Casamento Thaís e Tiago"
-            location={weddingLocation}
-            startDate={weddingDay}
-            endDate={addHours(weddingDay, 6)}
-            description="Chegue com antecedência para esse voo inesquecível. Mais informações em: tacta-one.vercel.app"
-          />
+          <div className="block lg:hidden">
+            <AddToCalendar
+              title="Casamento Thaís e Tiago"
+              location={weddingLocation}
+              startDate={weddingDay}
+              endDate={addHours(weddingDay, 6)}
+              description="Chegue com antecedência para esse voo inesquecível. Mais informações em: tacta-one.vercel.app"
+            />
+          </div>
         </div>
       </div>
 
@@ -61,7 +64,7 @@ export default function WhenAndWhere() {
               <PartyPopperIcon className={h1IconClasses} strokeWidth={1.5} />
             </div>
           }
-          subtitle="A escolha desse destino foi amor à primeira vista<br />A cerimônia e a festa serão no mesmo local."
+          subtitle="A cerimônia e a festa serão no mesmo local"
         >
           Cerimônia e Festa
         </H1>
@@ -69,7 +72,7 @@ export default function WhenAndWhere() {
         <div className="flex flex-col items-center gap-2 mt-0">
           <p className="text-primary text-lg">12 de Maio de 2024</p>
           <span className="font-bold text-lg">15:00</span>
-          <div className="flex flex-col items-center bg-destructive/10 rounded-lg p-2">
+          <div className="flex flex-col items-center bg-destructive/10 rounded-lg px-2 py-4 mx-2">
             <p className="text-destructive underline underline-offset-2">Atenção Tripulação</p>
             <p className="text-muted-foreground text-center">Em primeiro lugar, contamos com sua pontualidade. Nosso voo para esse dia inesquecível tem horário marcado.<br />Por isso, chegue com antecedência.</p>
           </div>
@@ -79,7 +82,7 @@ export default function WhenAndWhere() {
       <div className="flex flex-col items-center border-t pt-4">
         <H1
           icon={<Map className={h1IconClasses} strokeWidth={1.5} />}
-          subtitle="A escolha desse destino foi amor à primeira vista<br />A cerimônia e a festa serão no mesmo local."
+          subtitle="A escolha desse destino foi amor à primeira vista"
         >
           Local
         </H1>
@@ -106,6 +109,11 @@ export default function WhenAndWhere() {
             width={800}
             height={600}
           />
+        </div>
+
+        <div className="flex flex-col items-center my-4 mx-4 border border-primary rounded-lg md:p-2 lg:p-4 sm:p-2 p-2">
+          <p className="text-lg font-bold text-center mb-2">Saiba como se vestir para o voo</p>
+          <Button variant="default"><Link href="/DressCode">O que vestir</Link></Button>
         </div>
       </div>
     </div>
