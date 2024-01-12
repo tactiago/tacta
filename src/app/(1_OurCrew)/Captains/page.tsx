@@ -39,7 +39,31 @@ export default function Captains() {
 
           <h1 className="text-lg font-bold text-destructive mt-2">Tiago sobre Thaís</h1>
           <Paragraph>
-            Uma paraibana direto de João Pessoa e um paulista de São José dos Campos, mostrando que a ponte aérea do coração é eficiente e que corações dispostos se atraem.Mesmo com suas peculiaridades, a sintonia entre eles só ganhou mais altitude. Como uma aeronave em voo constante, a história deles foi se desenrolando ao longo dos anos, tornando-se um conjunto harmonioso que, quase 10 anos depois, se resume em uma frase: &quot;tudo a bordo dessa jornada única.&quot;
+            Senhoras e senhores, apertem os sintos, pois irei levá-los a um belíssimo voo panorâmico mostrando a maravilha de mulher que conquistou meu coração.
+          </Paragraph>
+          <Paragraph>
+            Assim como um avião prepara-se para decolar, você, Thaís, é como um vento forte e decidido da Paraíba, sempre arretada e determinada em alcançar seus objetivos. Sua força interior é como a turbina que impulsiona a aeronave, capaz de superar qualquer desafio que apareça em nosso caminho.
+          </Paragraph>
+          <Paragraph>
+            Sua inteligência é a bússola que guia nosso percurso, sempre apontando na direção certa. Assim como um piloto experiente, ela navega pelas complexidades da vida com destreza, encontrando soluções e iluminando nossos dias com a luz do seu conhecimento.
+          </Paragraph>
+          <Paragraph>
+            E que dizer da sua beleza? Como as asas de um avião que o tornam majestoso no céu, sua beleza única e radiante ilumina todos ao seu redor.
+          </Paragraph>
+          <Paragraph>
+            Assim como um avião cortando os céus, Thaís navega pela vida com determinação e coragem. Ela é a capitã do seu próprio destino, sempre pronta para enfrentar os desafios que surgem em nosso caminho, com um sorriso no rosto e uma atitude positiva.
+          </Paragraph>
+          <Paragraph>
+            Sua mente afiada é capaz de decifrar os enigmas mais complexos da vida, tornando-a não apenas uma companheira amorosa, mas também uma conselheira valiosa.
+          </Paragraph>
+          <Paragraph>
+            Sua determinação inabalável é como o impulso de um avião decolando na pista, conquistando novos horizontes e alcançando alturas extraordinárias.
+          </Paragraph>
+          <Paragraph>
+            É como se estivéssemos prestes a decolar juntos em uma jornada repleta de emoções e realizações, e eu não poderia estar mais empolgado por tê-la como minha parceira de voo.
+          </Paragraph>
+          <Paragraph>
+            Ela é minha co-pilota na jornada da vida, e estou emocionado por voar ao lado dela para sempre. Te vejo no altar, Tha!
           </Paragraph>
 
           <h1 className="text-lg font-bold text-primary mt-2">Thaís sobre Tiago</h1>
