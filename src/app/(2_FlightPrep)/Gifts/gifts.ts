@@ -59,4 +59,19 @@ export const giftsList = [
     title: "Diária de Hotel para o Pós-Festa",
     price: 504,
   },
+  {
+    imageSrc: "/gifts/filtro-agua.png",
+    title: "Filtro de água para o \"aguólatra\" do casal",
+    price: 104,
+  },
+  {
+    imageSrc: "/gifts/xicaras.png",
+    title: "Xícaras de café para momentos especiais",
+    price: 64,
+  },
+  {
+    imageSrc: "/gifts/capsula-cafe.png",
+    title: "Kit de cápsulas de café para Máquina Nespresso",
+    price: 44,
+  },
 ]
