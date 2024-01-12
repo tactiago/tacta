@@ -1,7 +1,7 @@
 "use client"
 
 import Card from "@/components/gifts/card";
-import { Gift, ShoppingBag } from "lucide-react";
+import { ArrowDownRightIcon, ArrowUpRightIcon, Gift, ShoppingBag } from "lucide-react";
 import { cn, formatPriceInPtBR } from "@/lib/utils";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -10,16 +10,35 @@ import { giftsList } from "@/app/(2_FlightPrep)/Gifts/gifts";
 import MessageDialog from "@/components/gifts/messageDialog";
 import Link from "next/link";
 import { responsiveWidth } from "@/app/page";
+import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarShortcut, MenubarTrigger } from "@/components/ui/menubar";
 
 export default function Gifts() {
   const [total, setTotal] = useState(0)
   const [quantity, setQuantity] = useState(0)
+  const [currentGiftsList, setCurrentGiftsList] = useState(giftsList)
 
   function sumToTotal(value: number) {
     setTotal(total + value)
     setQuantity((state) => {
       return state + (value > 0 ? 1 : -1)
     })
+  }
+
+  async function orderGiftsByPrice(order: "desc" | "asc") {
+    let giftsListToOrder = [...currentGiftsList]
+
+    if (order === "asc") {
+      giftsListToOrder.sort((a, b) => {
+        return a.price - b.price
+      })
+    }
+    else if (order === "desc") {
+      giftsListToOrder.sort((a, b) => {
+        return b.price - a.price
+      })
+    }
+
+    setCurrentGiftsList(giftsListToOrder)
   }
 
   return (
@@ -33,16 +52,30 @@ export default function Gifts() {
         </H1>
       </div>
 
+      <Menubar>
+        <MenubarMenu>
+          <MenubarTrigger className="border mb-4">Ordenar</MenubarTrigger>
+          <MenubarContent>
+            <MenubarItem onClick={() => orderGiftsByPrice("desc")}>
+              Primeiro o mais caro <MenubarShortcut><ArrowUpRightIcon /></MenubarShortcut>
+            </MenubarItem>
+            <MenubarItem onClick={() => orderGiftsByPrice("asc")}>
+              Primeiro o mais barato <MenubarShortcut><ArrowDownRightIcon /></MenubarShortcut>
+            </MenubarItem>
+          </MenubarContent>
+        </MenubarMenu>
+      </Menubar>
+
       <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-4">
         {
-          giftsList.map((gift, index) => {
+          currentGiftsList.map((gift) => {
             return (
               <Card
                 imageSrc={gift.imageSrc}
                 title={gift.title}
                 price={gift.price}
                 sumToTotal={sumToTotal}
-                key={index}
+                key={gift.title}
               />
             )
           })
