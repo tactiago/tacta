@@ -3,7 +3,7 @@ import prisma from '@/lib/prisma';
 import { TrophyIcon } from 'lucide-react';
 import { formatCreatedDateToPtBr, generateDistanceToNowText } from '@/lib/utils';
 
-const honneymoonLocationId = "ARG"
+const honneymoonLocationId = "CHI"
 
 export default async function Winners() {
 
