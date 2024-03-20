@@ -1,0 +1,302 @@
+export const tablesList = [
+  {
+    "Nome": "Thais Domingos",
+    "Mesa": "Noivos"
+  },
+  {
+    "Nome": "Tiago Cardoso",
+    "Mesa": "Noivos"
+  },
+  {
+    "Nome": "Risomar Domingos",
+    "Mesa": "Domingos de Castro"
+  },
+  {
+    "Nome": "Pedro Silva",
+    "Mesa": "Domingos de Castro"
+  },
+  {
+    "Nome": "Josenildo Silva",
+    "Mesa": "Domingos de Castro"
+  },
+  {
+    "Nome": "Thainá Domingos",
+    "Mesa": "Domingos de Castro"
+  },
+  {
+    "Nome": "Patrícia Domingos",
+    "Mesa": "Domingos de Castro"
+  },
+  {
+    "Nome": "Theo Domingos",
+    "Mesa": "Domingos de Castro"
+  },
+  {
+    "Nome": "Petrônio Domingos",
+    "Mesa": "CPI Pedro da Manga"
+  },
+  {
+    "Nome": "Gabriela Lustosa",
+    "Mesa": "CPI Pedro da Manga"
+  },
+  {
+    "Nome": "Nathanael Lustosa",
+    "Mesa": "CPI Pedro da Manga"
+  },
+  {
+    "Nome": "Petruccy Domingos",
+    "Mesa": "CPI Pedro da Manga"
+  },
+  {
+    "Nome": "Aline Moraes",
+    "Mesa": "CPI Pedro da Manga"
+  },
+  {
+    "Nome": "Ravi Moraes",
+    "Mesa": "CPI Pedro da Manga"
+  },
+  {
+    "Nome": "Lorenzo Moraes",
+    "Mesa": "CPI Pedro da Manga"
+  },
+  {
+    "Nome": "Elisangela Madrinha",
+    "Mesa": "Domingos de Castro"
+  },
+  {
+    "Nome": "Juliana Nunes",
+    "Mesa": "Amigos de Jampa"
+  },
+  {
+    "Nome": "Wesley Furtado",
+    "Mesa": "Amigos de Jampa"
+  },
+  {
+    "Nome": "Arthur Amorim",
+    "Mesa": "Amigos de Jampa"
+  },
+  {
+    "Nome": "Cláudio Filho",
+    "Mesa": "Amigos de Jampa"
+  },
+  {
+    "Nome": "Ian Félix",
+    "Mesa": "Amigos de Jampa"
+  },
+  {
+    "Nome": "Karine Kerber",
+    "Mesa": "Almeida"
+  },
+  {
+    "Nome": "Gabriela Palma",
+    "Mesa": "Almeida"
+  },
+  {
+    "Nome": "Priscila Pacheco",
+    "Mesa": "Almeida"
+  },
+  {
+    "Nome": "César Henrique",
+    "Mesa": "Almeida"
+  },
+  {
+    "Nome": "Stephanie Aparecida",
+    "Mesa": "Almeida"
+  },
+  {
+    "Nome": "Antônio Carlos Pedrosa",
+    "Mesa": "Costa de Almeida"
+  },
+  {
+    "Nome": "Nair Costa",
+    "Mesa": "Costa de Almeida"
+  },
+  {
+    "Nome": "Cristiane Costa",
+    "Mesa": "Costa de Almeida"
+  },
+  {
+    "Nome": "Domingos Júnior",
+    "Mesa": "Costa de Almeida"
+  },
+  {
+    "Nome": "Renata Costa",
+    "Mesa": "Costa de Almeida"
+  },
+  {
+    "Nome": "Antônio Carlos",
+    "Mesa": "Costa de Almeida"
+  },
+  {
+    "Nome": "Pe Rafael Galvão",
+    "Mesa": "Almeida"
+  },
+  {
+    "Nome": "Vera Lúcia Ribeiro",
+    "Mesa": "Costa de Almeida"
+  },
+  {
+    "Nome": "João Quirino Pedroza",
+    "Mesa": "Costa de Almeida"
+  },
+  {
+    "Nome": "Arthur Kerber",
+    "Mesa": "Kerber"
+  },
+  {
+    "Nome": "Mariane Osasco",
+    "Mesa": "Kerber"
+  },
+  {
+    "Nome": "Diego Kerber",
+    "Mesa": "Kerber"
+  },
+  {
+    "Nome": "Mariana Neves",
+    "Mesa": "Kerber"
+  },
+  {
+    "Nome": "Cristine Kerber",
+    "Mesa": "Kerber"
+  },
+  {
+    "Nome": "Urbano Carvalho",
+    "Mesa": "Kerber"
+  },
+  {
+    "Nome": "Regina Kerber",
+    "Mesa": "Kerber"
+  },
+  {
+    "Nome": "Bruno Cardoso",
+    "Mesa": "Cardoso"
+  },
+  {
+    "Nome": "Naiany Marinho",
+    "Mesa": "Cardoso"
+  },
+  {
+    "Nome": "Caio Marinho",
+    "Mesa": "Cardoso"
+  },
+  {
+    "Nome": "Ana Clara Barreto",
+    "Mesa": "Cardoso"
+  },
+  {
+    "Nome": "Dalva Cardoso",
+    "Mesa": "Cardoso"
+  },
+  {
+    "Nome": "Vinícius Cardoso",
+    "Mesa": "Cardoso"
+  },
+  {
+    "Nome": "João Bianchi",
+    "Mesa": "Soares"
+  },
+  {
+    "Nome": "Celeste Bianchi",
+    "Mesa": "Soares"
+  },
+  {
+    "Nome": "Lilian Fucuda",
+    "Mesa": "Soares"
+  },
+  {
+    "Nome": "André Hardt",
+    "Mesa": "Soares"
+  },
+  {
+    "Nome": "Célia Soares",
+    "Mesa": "Soares"
+  },
+  {
+    "Nome": "Luiz Soares",
+    "Mesa": "Soares"
+  },
+  {
+    "Nome": "Cida Hardt",
+    "Mesa": "Soares"
+  },
+  {
+    "Nome": "Edgar Hardt",
+    "Mesa": "Soares"
+  },
+  {
+    "Nome": "Felipe Bianchi",
+    "Mesa": "Primos Soares"
+  },
+  {
+    "Nome": "Marília Falleiros",
+    "Mesa": "Primos Soares"
+  },
+  {
+    "Nome": "Érika Bianchi",
+    "Mesa": "Primos Soares"
+  },
+  {
+    "Nome": "João Pedro Oliveira Skate",
+    "Mesa": "Primos Soares"
+  },
+  {
+    "Nome": "Fabrizio Soares",
+    "Mesa": "Primos Soares"
+  },
+  {
+    "Nome": "Alison Bessa",
+    "Mesa": "Amigos de Sanja"
+  },
+  {
+    "Nome": "Érika Barros",
+    "Mesa": "Amigos de Sanja"
+  },
+  {
+    "Nome": "Letícia Bezerra",
+    "Mesa": "Amigos de Sanja"
+  },
+  {
+    "Nome": "César Frazão",
+    "Mesa": "Amigos de Sanja"
+  },
+  {
+    "Nome": "Verônica Andrade",
+    "Mesa": "Amigos de Sanja"
+  },
+  {
+    "Nome": "Yuri Diogo",
+    "Mesa": "Amigos de Sanja"
+  },
+  {
+    "Nome": "Giovanir Oliveira",
+    "Mesa": "Amigos de Sanja"
+  },
+  {
+    "Nome": "Cristina Prevides",
+    "Mesa": "Amigos de Sanja"
+  },
+  {
+    "Nome": "João Pedro Arbex de Oliveira",
+    "Mesa": "Amigos de Sanja"
+  },
+  {
+    "Nome": "Fabrício Oliveira",
+    "Mesa": "Amigos de Jampa"
+  },
+  {
+    "Nome": "Lys Oliveira",
+    "Mesa": "Amigos de Jampa"
+  },
+  {
+    "Nome": "Elisete Rodrigues",
+    "Mesa": "Domingos de Castro"
+  },
+  {
+    "Nome": "Berliana Nunes",
+    "Mesa": "Amigos de Jampa"
+  },
+  {
+    "Nome": "Daniel Oliveira",
+    "Mesa": "Almeida"
+  }
+]

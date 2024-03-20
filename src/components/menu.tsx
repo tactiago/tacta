@@ -94,9 +94,9 @@ export default function Menu() {
               <Ticket className='h-5 w-5 text-secondary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm text-secondary">Assentos na Cerimônia</span></MenubarShortcut>
             </MenubarItem>
           </Link>
-          <Link href="/WorkInProgress">
+          <Link href="/Tables">
             <MenubarItem>
-              <Ratio className='h-5 w-5 text-secondary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm text-secondary">Mesas na Recepção</span></MenubarShortcut>
+              <Ratio className='h-5 w-5 text-primary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm">Mesas na Recepção</span></MenubarShortcut>
             </MenubarItem>
           </Link>
           <Link href="/WorkInProgress">
