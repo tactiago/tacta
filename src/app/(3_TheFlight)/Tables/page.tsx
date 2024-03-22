@@ -16,6 +16,17 @@ type TablesList = {
   Mesa: string
 }
 
+function removeAcento(text: string) {
+  text = text.toLowerCase();
+  text = text.replace(new RegExp('[ÁÀÂÃ]', 'gi'), 'a');
+  text = text.replace(new RegExp('[ÉÈÊ]', 'gi'), 'e');
+  text = text.replace(new RegExp('[ÍÌÎ]', 'gi'), 'i');
+  text = text.replace(new RegExp('[ÓÒÔÕ]', 'gi'), 'o');
+  text = text.replace(new RegExp('[ÚÙÛ]', 'gi'), 'u');
+  text = text.replace(new RegExp('[Ç]', 'gi'), 'c');
+  return text;
+}
+
 export default function Tables() {
   const [nameInput, setNameInput] = useState("")
   const [result, setResult] = useState<TablesList[]>([])
@@ -23,14 +34,19 @@ export default function Tables() {
   const searchParams = useSearchParams()
   const tableTag = searchParams?.get('tag')
 
-  function handleNameInput(value: string) {
-    setNameInput(value)
+  function handleNameInput(input: string) {
+    setNameInput(input)
 
     let searchingResult: TablesList[] = []
 
+    const normalizedSearchInput = removeAcento(input.toLowerCase())
+
     tablesList.map((guest) => {
-      const searchByNameIndex = guest.Nome.toLowerCase().search(value.toLowerCase())
-      const searchByTableIndex = guest.Mesa.toLowerCase().search(value.toLowerCase())
+      const normalizedName = removeAcento(guest.Nome.toLowerCase())
+      const normalizedTable = removeAcento(guest.Mesa.toLowerCase())
+
+      const searchByNameIndex = normalizedName.search(normalizedSearchInput)
+      const searchByTableIndex = normalizedTable.search(normalizedSearchInput)
 
       if (searchByTableIndex >= 0 || searchByNameIndex >= 0) {
         return searchingResult.push(guest)
@@ -84,7 +100,7 @@ export default function Tables() {
                     <Table currentTag={tableTag} tag='Amigos de Jampa' />
                   </div>
                   <div className='w-96 m-4 h-auto flex flex-col items-center align-top'>
-                    <span className='text-primary font-semibold'>Na sua mesa, também estarão:</span>
+                    <span className='text-primary font-semibold whitespace-nowrap'>Na sua mesa, também estarão:</span>
                     <ul className='list-disc pl-12'>
                       {
                         tablesList.filter((guest) => {
