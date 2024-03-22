@@ -32,36 +32,36 @@ export const tablesList = [
     "Mesa": "Domingos de Castro"
   },
   {
+    "Nome": "Elisangela Madrinha",
+    "Mesa": "Domingos de Castro"
+  },
+  {
     "Nome": "Petrônio Domingos",
-    "Mesa": "CPI Pedro da Manga"
+    "Mesa": "Tios Domingos de Castro"
   },
   {
     "Nome": "Gabriela Lustosa",
-    "Mesa": "CPI Pedro da Manga"
+    "Mesa": "Tios Domingos de Castro"
   },
   {
     "Nome": "Nathanael Lustosa",
-    "Mesa": "CPI Pedro da Manga"
+    "Mesa": "Tios Domingos de Castro"
   },
   {
     "Nome": "Petruccy Domingos",
-    "Mesa": "CPI Pedro da Manga"
+    "Mesa": "Tios Domingos de Castro"
   },
   {
     "Nome": "Aline Moraes",
-    "Mesa": "CPI Pedro da Manga"
+    "Mesa": "Tios Domingos de Castro"
   },
   {
     "Nome": "Ravi Moraes",
-    "Mesa": "CPI Pedro da Manga"
+    "Mesa": "Tios Domingos de Castro"
   },
   {
     "Nome": "Lorenzo Moraes",
-    "Mesa": "CPI Pedro da Manga"
-  },
-  {
-    "Nome": "Elisangela Madrinha",
-    "Mesa": "Domingos de Castro"
+    "Mesa": "Tios Domingos de Castro"
   },
   {
     "Nome": "Juliana Nunes",
