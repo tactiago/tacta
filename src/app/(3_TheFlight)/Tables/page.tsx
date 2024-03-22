@@ -29,9 +29,10 @@ export default function Tables() {
     let searchingResult: TablesList[] = []
 
     tablesList.map((guest) => {
-      const searchIndex = guest.Nome.toLowerCase().search(value.toLowerCase())
+      const searchByNameIndex = guest.Nome.toLowerCase().search(value.toLowerCase())
+      const searchByTableIndex = guest.Mesa.toLowerCase().search(value.toLowerCase())
 
-      if (searchIndex >= 0) {
+      if (searchByTableIndex >= 0 || searchByNameIndex >= 0) {
         return searchingResult.push(guest)
       }
     })
@@ -63,7 +64,7 @@ export default function Tables() {
 
                 <div className='grid grid-cols-2 gap-y-20 mb-4 max-w-screen'>
                   <div className='relative top-10 justify-self-end right-4'>
-                    <Table currentTag={tableTag} tag='CPI Pedro da Manga' rotation='rotate-[60deg]' />
+                    <Table currentTag={tableTag} tag='Tios Domingos de Castro' rotation='rotate-[60deg]' />
                   </div>
                   <div className='relative top-10 left-4'>
                     <Table currentTag={tableTag} tag='Domingos de Castro' rotation='-rotate-[60deg]' />
@@ -76,14 +77,35 @@ export default function Tables() {
                   </div>
                 </div>
 
-                <div className='flex flex-row items-center justify-center'>
+                <div className='flex flex-row items-start justify-center'>
                   <div className='flex flex-col items-start gap-y-2'>
                     <Table currentTag={tableTag} tag='Costa de Almeida' />
                     <Table currentTag={tableTag} tag='Kerber' />
                     <Table currentTag={tableTag} tag='Amigos de Jampa' />
                   </div>
-                  <div className='w-96 m-4'>
+                  <div className='w-96 m-4 h-auto flex flex-col items-center align-top'>
+                    <span className='text-primary font-semibold'>Na sua mesa, também estarão:</span>
+                    <ul className='list-disc pl-12'>
+                      {
+                        tablesList.filter((guest) => {
+                          return guest.Mesa === tableTag
+                        }).sort((a, b) => {
+                          let fa = a.Nome.normalize("NFD").toLowerCase(),
+                            fb = b.Nome.normalize("NFD").toLowerCase();
 
+                          if (fa < fb) {
+                            return -1;
+                          }
+                          if (fa > fb) {
+                            return 1;
+                          }
+                          return 0;
+                        }).
+                          map((guest) => {
+                            return <li key={guest.Nome}>{guest.Nome}</li>
+                          })
+                      }
+                    </ul>
                   </div>
                   <div className='flex flex-col items-end gap-y-2'>
                     <Table currentTag={tableTag} tag='Soares' />
@@ -107,7 +129,7 @@ export default function Tables() {
               className='mb-3 w-auto sm:w-80'
               value={nameInput}
               onChange={(e) => handleNameInput(e.target.value)}
-              placeholder='seu nome...'
+              placeholder='seu nome ou da mesa...'
             />
 
             {

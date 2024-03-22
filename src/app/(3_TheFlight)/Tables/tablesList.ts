@@ -124,7 +124,7 @@ export const tablesList = [
     "Mesa": "Costa de Almeida"
   },
   {
-    "Nome": "Antônio Carlos",
+    "Nome": "Antônio Carlos da Silva",
     "Mesa": "Costa de Almeida"
   },
   {
@@ -289,7 +289,7 @@ export const tablesList = [
   },
   {
     "Nome": "Elisete Rodrigues",
-    "Mesa": "Domingos de Castro"
+    "Mesa": "Almeida"
   },
   {
     "Nome": "Berliana Nunes",
