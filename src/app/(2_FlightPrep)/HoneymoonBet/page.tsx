@@ -64,6 +64,7 @@ export default function Gifts() {
         <Info strokeWidth={1.5} />
         <ul className="list-disc px-6">
           <li>Aposte para onde o casal irá passar a Lua de Mel!</li>
+          <li>Escolha quantos países quiser.</li>
           <li>Essa grande surpresa será revelada durante a festa.</li>
           <li>Todos que acertarem receberão um prêmio!</li>
         </ul>

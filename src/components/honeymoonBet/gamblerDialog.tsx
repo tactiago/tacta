@@ -6,6 +6,7 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import PixDialog from "./pixDialog";
 import { Country } from "@/app/(2_FlightPrep)/HoneymoonBet/page";
 import Image from "next/image";
+import { Progress } from "../ui/progress";
 
 interface messageDialogProps {
   total: number
@@ -30,11 +31,12 @@ export default function GamblerDialog({ total, selectedCountries }: messageDialo
         onClick={() => { }}
         className="font-bold md:text-lg sm:text-lg text-sm text-white flex flex-row items-center py-2 px-4 border border-white rounded-lg w-fit h-fit bg-emerald-400 hover:bg-emerald-500 transition"
       >
-        <Gift className='h-5 w-5 sm:mr-2' strokeWidth={1.5} /> <p className="hidden sm:block">Prosseguir</p>
+        <Gift className='h-5 w-5 mr-1 sm:mr-2' strokeWidth={1.5} /> <p className="">Prosseguir</p>
       </DialogTrigger>
 
-      <DialogContent>
+      <DialogContent >
         <DialogHeader>
+          <Progress value={33} className="w-full my-2" />
           <DialogTitle>Confirme sua aposta</DialogTitle>
           <DialogDescription>
             Coloque seu nome e sobrenome para registrar no Bolão
@@ -71,7 +73,7 @@ export default function GamblerDialog({ total, selectedCountries }: messageDialo
 
         </div>
 
-        <DialogFooter>
+        <DialogFooter className="flex items-center">
           <PixDialog gambler={gambler} selectedCountries={selectedCountries} onConfirmMessage={closeDialog} />
         </DialogFooter>
       </DialogContent>

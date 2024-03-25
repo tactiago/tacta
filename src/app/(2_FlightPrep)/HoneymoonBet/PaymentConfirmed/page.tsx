@@ -9,6 +9,7 @@ import H1, { h1IconClasses } from "@/components/content/h1"
 import { cn } from "@/lib/utils"
 import { useSearchParams } from "next/navigation"
 import { responsiveWidth } from "@/app/page"
+import { Progress } from "@/components/ui/progress"
 
 export default function PaymentConfirmed() {
 
@@ -19,6 +20,7 @@ export default function PaymentConfirmed() {
 
   return (
     <div className={cn(responsiveWidth, "flex flex-col items-center my-4 px-2")}>
+      <Progress value={100} className="w-full my-4 bg-emerald-500" />
       <H1
         icon={<CheckCircle2 className={cn(h1IconClasses, 'text-emerald-400')} strokeWidth={1.5} />}
         subtitle="Aposta registrada. Ansioso pra saber? Só no dia!"

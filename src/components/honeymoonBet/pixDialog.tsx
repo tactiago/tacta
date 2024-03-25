@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 import { QrCodePix } from 'qrcode-pix';
-import { CheckCircle, CircleDashed, Copy, Gift } from "lucide-react";
+import { CheckCircle, CircleDashed, Copy, Gift, Loader } from "lucide-react";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import {
@@ -18,6 +18,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { cn, formatPriceInPtBR } from "@/lib/utils";
 import { Country } from "@/app/(2_FlightPrep)/HoneymoonBet/page";
+import { Progress } from "../ui/progress";
+import { h1IconClasses } from "../content/h1";
 
 type pixDialogProps = {
   gambler: string
@@ -26,6 +28,7 @@ type pixDialogProps = {
 }
 
 export default function PixDialog({ gambler, selectedCountries, onConfirmMessage = () => { } }: pixDialogProps) {
+  const [isLoading, setIsLoading] = useState(false)
   const [isDialogOpen, setIsDialogOpen] = useState(false)
   const [wasQrCodeCopied, setWasQrCodeCopied] = useState(false)
   const [qrCodeImage, setQrCodeImage] = useState<string>("")
@@ -67,6 +70,8 @@ export default function PixDialog({ gambler, selectedCountries, onConfirmMessage
   }
 
   async function handlePaymentConfirmed() {
+    setIsLoading(true)
+
     if (gambler && selectedCountries.length) {
       await fetch('/api/HoneymoonBet', {
         method: "POST",
@@ -95,36 +100,46 @@ export default function PixDialog({ gambler, selectedCountries, onConfirmMessage
         onClick={() => setWasQrCodeCopied(false)}
         className="font-bold md:text-lg sm:text-lg text-sm text-white flex flex-row items-center py-2 px-4 border border-white rounded-lg w-fit h-fit bg-emerald-400 hover:bg-emerald-500 transition"
       >
-        <Gift className='h-5 w-5 sm:mr-2' strokeWidth={1.5} /> <p className="hidden sm:block">Apostar</p>
+        <Gift className='h-5 w-5 mr-2' strokeWidth={1.5} /> <p>Apostar</p>
       </DialogTrigger>
       <DialogContent className="max-w-[90vw] sm:max-w-[50vw] md:max-w-[35vw]">
-        <DialogHeader>
-          <DialogTitle>Depois do Pix, Confirme...</DialogTitle>
-          <DialogDescription>
-            No aplicativo do banco, você pode escanear o QR Code  ou copiar e colar
-          </DialogDescription>
-        </DialogHeader>
-        <div className="flex flex-col items-center">
-          <span className="text-emerald-600 font-semibold mb-1">{formatPriceInPtBR(total)}</span>
-          <p className="text-center border rounded-lg py-1 px-2">&ldquo; {message} &rdquo;</p>
-          <div className="w-40 h-40 lg:w-60 lg:h-60">
-            <Image unoptimized src={qrCodeImage} height={1000} width={1000} alt="QR Code" />
+        {isLoading ? (
+          <div className="flex flex-col place-items-center gap-y-4">
+            <p>Gravando sua entrega de carinho pra gente...</p>
+            <Loader className={cn(h1IconClasses, "animate-spin")} strokeWidth={1.5}></Loader>
           </div>
-          <CopyToClipboard text={qrCodePix.payload()}
-            onCopy={() => { setWasQrCodeCopied(true) }}>
-            <Button className={wasQrCodeCopied ? "bg-emerald-400 hover:bg-emerald-500" : ""}>
-              <Copy className="w-5 h-5 mr-2" />
-              {wasQrCodeCopied ? "Copiado" : "Pix Copia e Cola"}
+        ) : (<>
+          <DialogHeader>
+            <Progress value={66} className="w-full my-2" />
+            <DialogTitle>Faça o Pix, depois volte para confirmar...</DialogTitle>
+            <DialogDescription>
+              No aplicativo do banco, você pode escanear o QR Code ou copiar e colar. Ao finalizar, confirme, clicando em Fiz o Pix
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex flex-col items-center">
+            <span className="text-emerald-600 font-semibold mb-1">{formatPriceInPtBR(total)}</span>
+            <p className="text-center border rounded-lg py-1 px-2">&ldquo; {message} &rdquo;</p>
+            <div className="w-40 h-40 lg:w-60 lg:h-60">
+              <Image unoptimized src={qrCodeImage} height={1000} width={1000} alt="QR Code" />
+            </div>
+            <CopyToClipboard text={qrCodePix.payload()}
+              onCopy={() => { setWasQrCodeCopied(true) }}>
+              <Button className={wasQrCodeCopied ? "bg-emerald-100 hover:bg-emerald-200" : ""} variant={"outline"}>
+                <Copy className="w-5 h-5 mr-2" />
+                {wasQrCodeCopied ? "Copiado" : "Pix Copia e Cola"}
+              </Button>
+            </CopyToClipboard>
+            <Button
+              className={cn("mt-4 bg-emerald-400 hover:bg-emerald-500")}
+              onClick={handlePaymentConfirmed}
+            >
+              <CheckCircle className="w-5 h-5 mr-2" />
+              <span className="text-lg">Fiz o Pix</span>
             </Button>
-          </CopyToClipboard>
-          <Button
-            className={cn("mt-4 bg-emerald-400 hover:bg-emerald-500")}
-            onClick={handlePaymentConfirmed}
-          >
-            <CheckCircle className="w-5 h-5 mr-2" />
-            <span className="text-lg">Fiz o Pix</span>
-          </Button>
-        </div>
+          </div>
+        </>
+        )}
+
       </DialogContent>
     </Dialog>
   )
