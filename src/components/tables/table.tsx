@@ -11,7 +11,7 @@ export default function Table({ tag, rotation = "", currentTag }: TableProps) {
   const isSelectedTable = tag === currentTag
 
   return (
-    <div className={rotation + " w-fit group"} aria-selected={isSelectedTable}>
+    <div className={"w-fit h-fit group origin-center " + rotation} aria-selected={isSelectedTable}>
       {/* Chairs */}
       <div className="flex justify-evenly gap-4 my-1 group" aria-busy="false">
         <Chair />

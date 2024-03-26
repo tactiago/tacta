@@ -10,6 +10,8 @@ import { buttonVariants } from '@/components/ui/button';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import Table from '@/components/tables/table';
+import CaptainsTable from '@/components/tables/captainsTable';
+import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 
 type TablesList = {
   Nome: string
@@ -75,31 +77,46 @@ export default function Tables() {
               <ChevronLeftIcon /> Pesquisar outro nome
             </Link>
 
-            <div className='mx-2'>
-              <div className='sm:w-auto max-w-screen relative scale-50 -top-52 sm:scale-75 sm:-top-24 lg:scale-100 lg:top-0 overflow-x-auto pb-4 px-2'>
+            <ScrollArea className='max-h-[60vh] h-fit w-[90vw] sm:w-fit rounded-md border p-4'>
+              <div className='h-fit w-fit -top-52 sm:-top-24 lg:top-0 pb-4 px-2 pt-16'>
 
-                <div className='grid grid-cols-2 gap-y-20 mb-4 max-w-screen'>
-                  <div className='relative top-10 justify-self-end right-4'>
-                    <Table currentTag={tableTag} tag='Tios Domingos de Castro' rotation='rotate-[60deg]' />
+                {/* All Rounded */}
+                <div className='grid grid-cols-5 grid-rows-2 gap-y-20 place-items-center mb-4'>
+
+                  {/* Rounded left side */}
+                  <div className='col-span-2 row-span-2'>
+                    <div className='relative -top-6 -right-28'>
+                      <Table currentTag={tableTag} tag='Tios Domingos de Castro' rotation='rotate-[60deg]' />
+                    </div>
+                    <div className='relative -top-6 right-4'>
+                      <Table currentTag={tableTag} tag='Almeida' rotation='rotate-[30deg]' />
+                    </div>
                   </div>
-                  <div className='relative top-10 left-4'>
-                    <Table currentTag={tableTag} tag='Domingos de Castro' rotation='-rotate-[60deg]' />
+
+                  {/* Rounded center side */}
+                  <div className='col-span-1 row-span-1 mx-8'>
+                    <CaptainsTable currentTag={tableTag} tag='Noivos' />
                   </div>
-                  <div className='relative -top-10 justify-self-end right-40'>
-                    <Table currentTag={tableTag} tag='Almeida' rotation='rotate-[30deg]' />
-                  </div>
-                  <div className='relative -top-10 left-40'>
-                    <Table currentTag={tableTag} tag='Cardoso' rotation='-rotate-[30deg]' />
+
+                  {/* Rounded right side */}
+                  <div className='col-span-2 row-span-2'>
+                    <div className='relative -top-6 right-28'>
+                      <Table currentTag={tableTag} tag='Domingos de Castro' rotation='-rotate-[60deg]' />
+                    </div>
+                    <div className='relative -top-6 -right-4'>
+                      <Table currentTag={tableTag} tag='Cardoso' rotation='-rotate-[30deg]' />
+                    </div>
                   </div>
                 </div>
 
+                {/* All Aligned */}
                 <div className='flex flex-row items-start justify-center'>
                   <div className='flex flex-col items-start gap-y-2'>
                     <Table currentTag={tableTag} tag='Costa de Almeida' />
                     <Table currentTag={tableTag} tag='Kerber' />
                     <Table currentTag={tableTag} tag='Amigos de Jampa' />
                   </div>
-                  <div className='w-96 m-4 h-auto flex flex-col items-center align-top'>
+                  <div className='h-auto w-[35rem] flex flex-col items-center align-top'>
                     <span className='text-primary font-semibold whitespace-nowrap'>Na sua mesa, também estarão:</span>
                     <ul className='list-disc pl-12'>
                       {
@@ -130,7 +147,8 @@ export default function Tables() {
                   </div>
                 </div>
               </div>
-            </div>
+              <ScrollBar orientation='horizontal' />
+            </ScrollArea>
           </>
         ) : (
           <>
