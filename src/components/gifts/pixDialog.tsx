@@ -11,6 +11,7 @@ import {
   Dialog,
   DialogContent,
   DialogDescription,
+  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -104,6 +105,7 @@ export default function PixDialog({ total, message, from, onConfirmMessage = () 
                     No aplicativo do banco, você pode escanear o QR Code  ou copiar e colar
                   </DialogDescription>
                 </DialogHeader>
+
                 <div className="flex flex-col items-center">
                   <span className="text-emerald-600 font-semibold mb-1">{formatPriceInPtBR(total)}</span>
                   <p className="text-center border rounded-lg py-1 px-2">&ldquo; {message} &rdquo;</p>
@@ -117,7 +119,9 @@ export default function PixDialog({ total, message, from, onConfirmMessage = () 
                       {wasCopied ? "Copiado" : "Pix Copia e Cola"}
                     </Button>
                   </CopyToClipboard>
+                </div>
 
+                <DialogFooter className="flex items-end justify-end">
                   <Button
                     className={cn("mt-4 bg-emerald-400 hover:bg-emerald-500")}
                     onClick={handlePaymentConfirmed}
@@ -125,7 +129,7 @@ export default function PixDialog({ total, message, from, onConfirmMessage = () 
                     <CheckCircle className="w-5 h-5 mr-2" />
                     <span className="text-lg">Fiz o Pix</span>
                   </Button>
-                </div>
+                </DialogFooter>
               </>
             )}
       </DialogContent>
