@@ -17,9 +17,9 @@ export default async function Gamblers() {
     <div className='flex flex-col items-center my-4 px-2'>
       <H1
         icon={<Flag className={h1IconClasses} strokeWidth={1.5} />}
-        subtitle={`Lista das pessoas que apostaram`}
+        subtitle={`Confira todas as apostas registradas no Bolão da Lua de Mel`}
       >
-        Apostadores
+        Apostas
       </H1>
       <ul className='mt-4'>
         {gamblers.map((bet) => (
@@ -39,7 +39,7 @@ export default async function Gamblers() {
                 })
               }
             </div>
-            <div className='flex items-center gap-2'>
+            <div className='flex items-center gap-2 mt-2'>
               <b>{bet.author}</b> em {" "}
               {formatCreatedDateToPtBr(bet.createdAt)} {" "}
               ({generateDistanceToNowText(bet.createdAt)}) apostou em: {" "}

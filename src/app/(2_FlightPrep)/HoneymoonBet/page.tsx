@@ -99,8 +99,8 @@ export default function Gifts() {
       }
 
       <div className="flex flex-col items-center my-4 mx-4 border border-primary rounded-lg md:p-2 lg:p-4 sm:p-2 p-2">
-        <p className="text-lg font-bold text-center mb-2">Saiba onde e quando será o voo!</p>
-        <Button variant="default"><Link href="/WhenAndWhere">Quando e onde</Link></Button>
+        <p className="text-lg font-bold text-center mb-2">Confira quem já apostou!</p>
+        <Button variant="default"><Link href="/HoneymoonBet/Gamblers">Ver apostas</Link></Button>
       </div>
     </div>
   )
