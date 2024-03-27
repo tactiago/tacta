@@ -11,6 +11,7 @@ import {
   Dialog,
   DialogContent,
   DialogDescription,
+  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -116,6 +117,7 @@ export default function PixDialog({ gambler, selectedCountries, onConfirmMessage
               No aplicativo do banco, você pode escanear o QR Code ou copiar e colar. Ao finalizar, confirme, clicando em Fiz o Pix
             </DialogDescription>
           </DialogHeader>
+
           <div className="flex flex-col items-center">
             <span className="text-emerald-600 font-semibold mb-1">{formatPriceInPtBR(total)}</span>
             <p className="text-center border rounded-lg py-1 px-2">&ldquo; {message} &rdquo;</p>
@@ -129,14 +131,17 @@ export default function PixDialog({ gambler, selectedCountries, onConfirmMessage
                 {wasQrCodeCopied ? "Copiado" : "Pix Copia e Cola"}
               </Button>
             </CopyToClipboard>
+          </div>
+
+          <DialogFooter className="flex items-end justify-end">
             <Button
               className={cn("mt-4 bg-emerald-400 hover:bg-emerald-500")}
               onClick={handlePaymentConfirmed}
             >
               <CheckCircle className="w-5 h-5 mr-2" />
-              <span className="text-lg">Fiz o Pix</span>
+              <span className="text-lg font-bold">Fiz o Pix</span>
             </Button>
-          </div>
+          </DialogFooter>
         </>
         )}
 
