@@ -78,13 +78,13 @@ export default function Tables() {
             </Link>
 
             <ScrollArea className='max-h-[60vh] h-fit w-[90vw] sm:w-fit rounded-md border p-4'>
-              <div className='h-fit w-fit -top-52 sm:-top-24 lg:top-0 pb-4 px-2 pt-16'>
+              <div className='h-fit w-fit -top-52 scale-75 sm:scale-100 sm:-top-24 lg:top-0 pb-4 px-2 pt-16'>
 
                 {/* All Rounded */}
                 <div className='grid grid-cols-5 grid-rows-2 gap-y-20 place-items-center mb-4'>
 
                   {/* Rounded left side */}
-                  <div className='col-span-2 row-span-2'>
+                  <div className='col-span-2 row-span-2 mr-12'>
                     <div className='relative -top-6 -right-28'>
                       <Table currentTag={tableTag} tag='Tios Domingos de Castro' rotation='rotate-[60deg]' />
                     </div>
@@ -94,12 +94,12 @@ export default function Tables() {
                   </div>
 
                   {/* Rounded center side */}
-                  <div className='col-span-1 row-span-1 mx-8'>
+                  <div className='col-span-1 row-span-1'>
                     <CaptainsTable currentTag={tableTag} tag='Noivos' />
                   </div>
 
                   {/* Rounded right side */}
-                  <div className='col-span-2 row-span-2'>
+                  <div className='col-span-2 row-span-2 ml-12'>
                     <div className='relative -top-6 right-28'>
                       <Table currentTag={tableTag} tag='Domingos de Castro' rotation='-rotate-[60deg]' />
                     </div>
