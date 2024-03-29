@@ -7,7 +7,7 @@ import {
   MenubarShortcut,
   MenubarTrigger,
 } from "@/components/ui/menubar"
-import { CalendarClock, CalendarHeart, Flag, Gift, Heart, Home, MenuIcon, Ratio, SearchCheck, Send, Shirt, Ticket, UserCheck, Users } from "lucide-react"
+import { CalendarClock, CalendarHeart, Flag, Gift, Heart, Home, MenuIcon, Ratio, SearchCheck, Send, Shirt, Ticket, Users, UtensilsIcon } from "lucide-react"
 import Link from "next/link"
 
 export default function Menu() {
@@ -94,9 +94,9 @@ export default function Menu() {
               <Ratio className='h-5 w-5 text-primary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm">Mesas na Recepção</span></MenubarShortcut>
             </MenubarItem>
           </Link>
-          <Link href="/WorkInProgress">
+          <Link href="/Menu">
             <MenubarItem>
-              <UserCheck className='h-5 w-5 text-secondary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm text-secondary">Fornecedores</span></MenubarShortcut>
+              <UtensilsIcon className='h-5 w-5 text-primary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm">Cardápio</span></MenubarShortcut>
             </MenubarItem>
           </Link>
 
