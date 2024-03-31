@@ -34,7 +34,7 @@ export default function PixDialog({ gambler, selectedCountries, onConfirmMessage
   const [wasQrCodeCopied, setWasQrCodeCopied] = useState(false)
   const [qrCodeImage, setQrCodeImage] = useState<string>("")
 
-  const message = gambler + " - " + selectedCountries.map((country) => (country.id)).join(',')
+  const message = gambler.substring(0, 12) + " - " + selectedCountries.map((country) => (country.id)).join(',')
 
   const total = selectedCountries.reduce((accumulator, { price }) => {
     return accumulator + price
