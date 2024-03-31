@@ -144,7 +144,7 @@ export const tablesList = [
     "Mesa": "Kerber"
   },
   {
-    "Nome": "Mariane Osasco",
+    "Nome": "Marianne Ribeiro",
     "Mesa": "Kerber"
   },
   {
