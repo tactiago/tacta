@@ -24,8 +24,7 @@ export default async function Gamblers() {
       <ul className='mt-4'>
         {gamblers.map((bet) => (
           <li key={bet.id} className='border my-2 rounded-lg p-2'>
-
-            <div className="flex items-center justify-center content-center place-items-center max-w-full gap-2">
+            <div className="flex items-center justify-center content-center place-items-center max-w-full gap-2 overflow-hidden">
               {
                 bet.country.map((betCountry) => {
                   return <Image

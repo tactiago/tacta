@@ -120,7 +120,7 @@ export default function PixDialog({ gambler, selectedCountries, onConfirmMessage
 
           <div className="flex flex-col items-center">
             <span className="text-emerald-600 font-semibold mb-1">{formatPriceInPtBR(total)}</span>
-            <p className="text-center border rounded-lg py-1 px-2">&ldquo; {message} &rdquo;</p>
+            <p className="text-center border rounded-lg py-1 px-2">&ldquo; {message.replaceAll(",", ", ")} &rdquo;</p>
             <div className="w-40 h-40 lg:w-60 lg:h-60">
               <Image unoptimized src={qrCodeImage} height={1000} width={1000} alt="QR Code" />
             </div>
