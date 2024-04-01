@@ -110,8 +110,11 @@ export default function Menu() {
         </H1>
         <ul className="list-disc mt-4 space-y-2">
           <li>Charutinho De Carne Seca</li>
+          <li>Esfirra de Frango</li>
+          <li>Folhado de Espinafre com Ricota</li>
           <li>Mini Kafta Com Alecrim E Molho De Iogurte E Hortelã</li>
           <li>Mini Quiche De Alho Poró</li>
+          <li>Mini Quiche De Queijo e Bacon</li>
           <li>Pizzinhas Margueritas</li>
         </ul>
       </section>
@@ -126,6 +129,7 @@ export default function Menu() {
         <ul className="list-disc mt-4 space-y-2">
           <li>Baião de Dois com Queijo Coalho</li>
           <li>Costela Suína na cerveja preta com molho barbecue e batata rústica</li>
+          <li>Rondelli de Presunto e Queijo ao Molho Sugo</li>
         </ul>
       </section>
 
