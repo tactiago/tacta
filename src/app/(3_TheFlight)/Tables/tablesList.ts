@@ -32,15 +32,11 @@ export const tablesList = [
     "Mesa": "Domingos de Castro"
   },
   {
-    "Nome": "Elisangela Madrinha",
+    "Nome": "Elisete Rodrigues",
     "Mesa": "Domingos de Castro"
   },
   {
     "Nome": "Petrônio Domingos",
-    "Mesa": "Tios Domingos de Castro"
-  },
-  {
-    "Nome": "Gabriela Lustosa",
     "Mesa": "Tios Domingos de Castro"
   },
   {
@@ -80,7 +76,19 @@ export const tablesList = [
     "Mesa": "Amigos de Jampa"
   },
   {
-    "Nome": "Ian Félix",
+    "Nome": "Priscila Pacheco",
+    "Mesa": "Amigos de Jampa"
+  },
+  {
+    "Nome": "Mauro Pacheco",
+    "Mesa": "Amigos de Jampa"
+  },
+  {
+    "Nome": "Lys Oliveira",
+    "Mesa": "Amigos de Jampa"
+  },
+  {
+    "Nome": "Fabrício Silva",
     "Mesa": "Amigos de Jampa"
   },
   {
@@ -88,11 +96,11 @@ export const tablesList = [
     "Mesa": "Almeida"
   },
   {
-    "Nome": "Gabriela Palma",
+    "Nome": "Daniel Oliveira",
     "Mesa": "Almeida"
   },
   {
-    "Nome": "Priscila Pacheco",
+    "Nome": "Gabriela Palma",
     "Mesa": "Almeida"
   },
   {
@@ -104,19 +112,23 @@ export const tablesList = [
     "Mesa": "Almeida"
   },
   {
+    "Nome": "Cristiane Costa",
+    "Mesa": "Almeida"
+  },
+  {
+    "Nome": "Domingos Júnior",
+    "Mesa": "Almeida"
+  },
+  {
+    "Nome": "Pe Rafael Galvão",
+    "Mesa": "Almeida"
+  },
+  {
     "Nome": "Antônio Carlos Pedrosa",
     "Mesa": "Costa de Almeida"
   },
   {
     "Nome": "Nair Costa",
-    "Mesa": "Costa de Almeida"
-  },
-  {
-    "Nome": "Cristiane Costa",
-    "Mesa": "Costa de Almeida"
-  },
-  {
-    "Nome": "Domingos Júnior",
     "Mesa": "Costa de Almeida"
   },
   {
@@ -128,15 +140,15 @@ export const tablesList = [
     "Mesa": "Costa de Almeida"
   },
   {
-    "Nome": "Pe Rafael Galvão",
-    "Mesa": "Almeida"
-  },
-  {
     "Nome": "Vera Lúcia Ribeiro",
     "Mesa": "Costa de Almeida"
   },
   {
     "Nome": "João Quirino Pedroza",
+    "Mesa": "Costa de Almeida"
+  },
+  {
+    "Nome": "Zenira",
     "Mesa": "Costa de Almeida"
   },
   {
@@ -188,10 +200,6 @@ export const tablesList = [
     "Mesa": "Cardoso"
   },
   {
-    "Nome": "Vinícius Cardoso",
-    "Mesa": "Cardoso"
-  },
-  {
     "Nome": "João Bianchi",
     "Mesa": "Soares"
   },
@@ -200,7 +208,7 @@ export const tablesList = [
     "Mesa": "Soares"
   },
   {
-    "Nome": "Lilian Fucuda",
+    "Nome": "Clara Soares",
     "Mesa": "Soares"
   },
   {
@@ -244,6 +252,10 @@ export const tablesList = [
     "Mesa": "Primos Soares"
   },
   {
+    "Nome": "Giovanir Oliveira",
+    "Mesa": "Primos Soares"
+  },
+  {
     "Nome": "Alison Bessa",
     "Mesa": "Amigos de Sanja"
   },
@@ -268,10 +280,6 @@ export const tablesList = [
     "Mesa": "Amigos de Sanja"
   },
   {
-    "Nome": "Giovanir Oliveira",
-    "Mesa": "Amigos de Sanja"
-  },
-  {
     "Nome": "Cristina Prevides",
     "Mesa": "Amigos de Sanja"
   },
@@ -287,16 +295,4 @@ export const tablesList = [
     "Nome": "Lys Oliveira",
     "Mesa": "Amigos de Jampa"
   },
-  {
-    "Nome": "Elisete Rodrigues",
-    "Mesa": "Almeida"
-  },
-  {
-    "Nome": "Berliana Nunes",
-    "Mesa": "Amigos de Jampa"
-  },
-  {
-    "Nome": "Daniel Oliveira",
-    "Mesa": "Almeida"
-  }
 ]
