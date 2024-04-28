@@ -84,9 +84,9 @@ export default function Menu() {
               <CalendarClock className='h-5 w-5 text-secondary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm text-secondary">Cronograma</span></MenubarShortcut>
             </MenubarItem>
           </Link>
-          <Link href="/WorkInProgress">
+          <Link href="/Seats">
             <MenubarItem>
-              <Ticket className='h-5 w-5 text-secondary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm text-secondary">Assentos na Cerimônia</span></MenubarShortcut>
+              <TreesIcon className='h-5 w-5 text-primary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm">Assentos na Cerimônia</span></MenubarShortcut>
             </MenubarItem>
           </Link>
           <Link href="/Tables">
@@ -99,7 +99,6 @@ export default function Menu() {
               <UtensilsIcon className='h-5 w-5 text-primary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm">Cardápio</span></MenubarShortcut>
             </MenubarItem>
           </Link>
-
         </MenubarContent>
       </MenubarMenu>
     </Menubar>

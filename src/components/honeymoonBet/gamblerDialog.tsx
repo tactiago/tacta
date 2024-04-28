@@ -44,7 +44,7 @@ export default function GamblerDialog({ total, selectedCountries }: messageDialo
         </DialogHeader>
 
         <div>
-          <div className="flex items-center justify-center content-center place-items-center max-w-full">
+          <div className="grid grid-flow-col-dense items-center justify-center content-center place-items-center max-w-full">
             {
               selectedCountries.map((country, index) => (
                 <Image
