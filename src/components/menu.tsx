@@ -7,7 +7,7 @@ import {
   MenubarShortcut,
   MenubarTrigger,
 } from "@/components/ui/menubar"
-import { CalendarClock, CalendarHeart, Flag, Gift, Heart, Home, MenuIcon, Ratio, SearchCheck, Send, Shirt, Ticket, Users, UtensilsIcon } from "lucide-react"
+import { CalendarClock, CalendarHeart, Flag, Gift, Heart, Home, MenuIcon, Ratio, SearchCheck, Send, Shirt, Ticket, TreesIcon, Users, UtensilsIcon } from "lucide-react"
 import Link from "next/link"
 
 export default function Menu() {
