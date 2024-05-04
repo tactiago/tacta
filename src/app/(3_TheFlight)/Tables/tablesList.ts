@@ -287,12 +287,4 @@ export const tablesList = [
     "Nome": "João Pedro Arbex de Oliveira",
     "Mesa": "Amigos de Sanja"
   },
-  {
-    "Nome": "Fabrício Oliveira",
-    "Mesa": "Amigos de Jampa"
-  },
-  {
-    "Nome": "Lys Oliveira",
-    "Mesa": "Amigos de Jampa"
-  },
 ]
