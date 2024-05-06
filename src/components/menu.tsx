@@ -43,11 +43,6 @@ export default function Menu() {
           <MenubarItem disabled>
             <b className="font-bold text-primary">Preparação Pré-Voo</b>
           </MenubarItem>
-          <Link href="/WorkInProgress">
-            <MenubarItem>
-              <SearchCheck className='h-5 w-5 text-secondary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm text-secondary text-secondary">Indicações</span></MenubarShortcut>
-            </MenubarItem>
-          </Link>
           <Link href="/Messages">
             <MenubarItem>
               <Send className='h-5 w-5 text-primary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm">Mensagens</span></MenubarShortcut>
@@ -77,11 +72,6 @@ export default function Menu() {
           <Link href="/DressCode">
             <MenubarItem>
               <Shirt className='h-5 w-5 text-primary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm">O que vestir</span></MenubarShortcut>
-            </MenubarItem>
-          </Link>
-          <Link href="/WorkInProgress">
-            <MenubarItem>
-              <CalendarClock className='h-5 w-5 text-secondary' strokeWidth={1.5} /><MenubarShortcut><span className="font-semibold text-sm text-secondary">Cronograma</span></MenubarShortcut>
             </MenubarItem>
           </Link>
           <Link href="/Seats">
