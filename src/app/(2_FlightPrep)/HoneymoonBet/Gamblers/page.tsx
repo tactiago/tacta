@@ -1,17 +1,17 @@
 import H1, { h1IconClasses } from '@/components/content/h1';
-import prisma from '@/lib/prisma';
 import { Flag } from 'lucide-react';
+
 import { formatCreatedDateToPtBr, generateDistanceToNowText } from '@/lib/utils';
 import { countryList } from '../countries';
 import Image from 'next/image';
+import { getGamblers } from '@/utils/getGamblers';
+
+export const revalidate = 5
+export const dynamic = 'force-dynamic'
 
 export default async function Gamblers() {
 
-  const gamblers = await prisma.bet.findMany({
-    orderBy: {
-      author: 'asc'
-    }
-  });
+  const gamblers = await getGamblers()
 
   return (
     <div className='flex flex-col items-center my-4 px-2'>
@@ -22,7 +22,7 @@ export default async function Gamblers() {
         Apostas
       </H1>
       <ul className='mt-4'>
-        {gamblers.map((bet) => (
+        {gamblers && gamblers.map((bet) => (
           <li key={bet.id} className='border my-2 rounded-lg p-2'>
             <div className="flex items-center justify-center content-center place-items-center max-w-full gap-2 overflow-hidden">
               {

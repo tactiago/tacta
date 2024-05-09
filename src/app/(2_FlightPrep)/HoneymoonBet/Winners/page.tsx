@@ -5,7 +5,7 @@ import { formatCreatedDateToPtBr, generateDistanceToNowText } from '@/lib/utils'
 import Image from 'next/image';
 import { countryList } from '../countries';
 
-const honneymoonLocationId = "CHI"
+const honneymoonLocationId = "CHL"
 
 export default async function Winners() {
 
@@ -25,7 +25,7 @@ export default async function Winners() {
     <div className='flex flex-col items-center my-4 px-2'>
       <H1
         icon={<TrophyIcon className={h1IconClasses} strokeWidth={1.5} />}
-        subtitle={`Lista das pessoas que apostaram em ${honneymoonLocationId}`}
+        subtitle={`${winners.length} pessoas apostaram em ${honneymoonLocationId}`}
       >
         Vencedores da aposta
       </H1>
