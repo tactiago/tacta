@@ -1,8 +1,23 @@
+<!DOCTYPE html>
 <html>
 <head>
-</head>    
+    <meta http-equiv="Content-Type" content="application/json; charset=utf-8">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Esconde todo o conteúdo HTML
+            document.body.style.display = 'none';
+            
+            // Exibe apenas o JSON
+            const dados = {
+                nome: 'João',
+                idade: 30,
+                profissao: 'Desenvolvedor'
+            };
+            
+            document.write(JSON.stringify(dados));
+        });
+    </script>
+</head>
 <body>
-<a href="my.bluetoothprint.scheme://http://192.168.43.160/response.php">localhost print</a>
-<a href="my.bluetoothprint.scheme://https://jsonplaceholder.typicode.com/todos/1">webpage print</a>
 </body>
 </html>
